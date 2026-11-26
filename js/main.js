@@ -72,7 +72,7 @@
     const path = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.primary-nav .nav-link, .mobile-nav-list .mobile-nav-link').forEach((link) => {
       const href = link.getAttribute('href');
-      if (!href || href === '#') return;
+      if (!href || href === '#' || href.includes('#')) return;
       const targetPage = href.split('#')[0];
       if (targetPage === path) {
         link.classList.add('active');

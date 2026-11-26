@@ -16,23 +16,27 @@
 
   <header class="site-header" id="siteHeader">
     <div class="container nav-container">
-      <a href="index.html" class="logo" aria-label="AquaPure Home">
+      <a href="index.html" class="logo" aria-label="AquaPure – Clarity in Every Drop.">
         <span class="logo-mark" aria-hidden="true">
           <svg width="24" height="24" viewBox="0 0 36 36" fill="none">
-            <path d="M18 3C18 3 7 14.5 7 22C7 28.075 11.925 33 18 33C24.075 33 29 28.075 29 22C29 14.5 18 3Z" fill="url(#navDropSvc)"/>
+            <path d="M18 3C18 3 7 14.5 7 22C7 28.075 11.925 33 18 33C24.075 33 29 28.075 29 22C29 14.5 18 3Z" fill="url(#navDropLogo)"/>
             <path d="M18 11C18 11 12 17.5 12 22C12 25.314 14.686 28 18 28C21.314 28 24 25.314 24 22C24 17.5 18 11Z" fill="rgba(255,255,255,0.34)"/>
-            <defs><linearGradient id="navDropSvc" x1="18" y1="3" x2="18" y2="33" gradientUnits="userSpaceOnUse"><stop stop-color="#48CAE4"/><stop offset="1" stop-color="#168AAD"/></linearGradient></defs>
+            <defs><linearGradient id="navDropLogo" x1="18" y1="3" x2="18" y2="33" gradientUnits="userSpaceOnUse"><stop stop-color="#48CAE4"/><stop offset="1" stop-color="#168AAD"/></linearGradient></defs>
           </svg>
         </span>
-        <span class="logo-text">Aqua<span class="logo-accent">Pure</span></span>
+        <span class="logo-brand-group">
+          <span class="logo-text">Aqua<span class="logo-accent">Pure</span></span>
+          <span class="logo-tagline">Clarity in Every Drop.</span>
+        </span>
       </a>
 
       <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
         <ul class="nav-list" role="list">
           <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
           <li class="has-dropdown">
-            <a href="home2.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+            <a href="home2.html#domestic-solutions" class="nav-link" aria-haspopup="true" aria-expanded="false">
               Solutions
               <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -68,11 +72,15 @@
   <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true">
     <div class="mobile-nav-drawer">
       <div class="mobile-nav-top">
-        <span class="logo-text" style="color:#fff">Aqua<span style="color:#48CAE4">Pure</span></span>
+        <span class="logo-brand-group">
+          <span class="logo-text" style="color:#fff">Aqua<span style="color:#48CAE4">Pure</span></span>
+          <span class="logo-tagline" style="color:rgba(232,247,250,0.75)">Clarity in Every Drop.</span>
+        </span>
         <button type="button" class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
       </div>
       <ul class="mobile-nav-list" role="list">
         <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="home2.html" class="mobile-nav-link">Home 2</a></li>
         <li><a href="about.html" class="mobile-nav-link">About</a></li>
         <li>
           <button type="button" class="mobile-nav-link mobile-sub-toggle" aria-expanded="false">
@@ -80,7 +88,6 @@
             <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg>
           </button>
           <ul class="mobile-sub-list" hidden>
-            <li><a href="home2.html" class="mobile-sub-link">Specialized &amp; Industrial Overview</a></li>
             <li><a href="services.html#products" class="mobile-sub-link">Products Catalogue</a></li>
             <li><a href="home2.html#domestic-solutions" class="mobile-sub-link">Domestic Purification</a></li>
             <li><a href="home2.html#commercial" class="mobile-sub-link">Commercial RO Systems</a></li>
@@ -337,11 +344,12 @@
           <h4 class="footer-heading">Quick Links</h4>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="home2.html">Specialized Solutions</a></li>
+            <li><a href="home2.html">Home 2</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services &amp; Products</a></li>
-            <li><a href="blog.html">Water Knowledge Blog</a></li>
-            <li><a href="pricing.html">Pricing &amp; Quotes</a></li>
+            <li><a href="home2.html#domestic-solutions">Solutions</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
