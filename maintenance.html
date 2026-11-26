@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="AquaPure scheduled maintenance notice and notification signup.">
-  <title>Scheduled Maintenance – Coming Soon | AquaPure</title>
+  <title>Scheduled Maintenance - Maintenance Page | AquaPure</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -26,39 +26,66 @@
       </div>
     </header>
 
-    <main class="coming-soon-main">
-      <div style="display:inline-flex;justify-content:center;margin-bottom:20px">
-        <svg width="76" height="76" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-          <circle cx="32" cy="32" r="30" stroke="rgba(72,202,228,0.3)" stroke-width="1.5" stroke-dasharray="4 4"/>
-          <path d="M32 12C32 12 20 26.5 20 36A12 12 0 0044 36C44 26.5 32 12 32 12Z" fill="url(#csCenterDrop)"/>
-          <defs><linearGradient id="csCenterDrop" x1="32" y1="12" x2="32" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#48CAE4"/><stop offset="1" stop-color="#2A9D8F"/></linearGradient></defs>
-        </svg>
-      </div>
-
-      <span class="section-eyebrow" style="color:var(--color-cyan);justify-content:center">Scheduled Update</span>
-      <h1>Refining Our Digital Experience</h1>
-      <p style="color:rgba(232,247,250,0.82);max-width:54ch;margin:14px auto 0;font-size:1.05rem">
-        AquaPure is carrying out scheduled digital maintenance to keep our water solution resources fast, clear, and dependable. Thank you for your patience.
-      </p>
-
-      <div class="countdown" id="countdown" aria-label="Estimated maintenance countdown">
-        <div class="countdown-box"><span class="countdown-num" id="cdDays">00</span><span class="countdown-label">Days</span></div>
-        <div class="countdown-box"><span class="countdown-num" id="cdHours">00</span><span class="countdown-label">Hours</span></div>
-        <div class="countdown-box"><span class="countdown-num" id="cdMinutes">00</span><span class="countdown-label">Minutes</span></div>
-        <div class="countdown-box"><span class="countdown-num" id="cdSeconds">00</span><span class="countdown-label">Seconds</span></div>
-      </div>
-
-      <form id="notifyForm" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;max-width:460px;margin:0 auto" novalidate>
-        <input type="email" id="notifyEmail" class="newsletter-input" placeholder="Enter your email for launch update" aria-label="Email for launch notification" required>
-        <button type="submit" class="btn btn--aqua">Notify Me</button>
-      </form>
-      <p class="form-disclaimer" style="color:rgba(232,247,250,0.62);margin-top:12px">
-        Front-end demonstration notice — notification signups are validated locally without sending email.
-      </p>
-
-      <div style="margin-top:28px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
-        <a href="index.html" class="btn btn--white">Back to Home</a>
-        <a href="contact.html" class="btn btn--ghost-light">Urgent Enquiry</a>
+    <main class="coming-soon-main" style="max-width:1100px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;align-items:center;text-align:left">
+        <div style="display:flex;justify-content:center;align-items:center">
+          <svg viewBox="0 0 500 500" width="100%" style="max-width:420px" role="img" aria-label="Maintenance vector illustration">
+            <defs>
+              <linearGradient id="mGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#48CAE4"/>
+                <stop offset="100%" stop-color="#168AAD"/>
+              </linearGradient>
+              <linearGradient id="mGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#90E0EF"/>
+                <stop offset="100%" stop-color="#48CAE4"/>
+              </linearGradient>
+            </defs>
+            <circle cx="250" cy="250" r="220" fill="rgba(72,202,228,0.08)" stroke="rgba(72,202,228,0.35)" stroke-width="2" stroke-dasharray="8 6"/>
+            <path d="M250 90 C250 90 150 230 150 300 C150 375 195 420 250 420 C305 420 350 375 350 300 C350 230 250 90 250 90Z" fill="url(#mGrad2)" opacity="0.95"/>
+            <path d="M250 140 C250 140 190 230 190 285 C190 330 215 360 250 360 C285 360 310 330 310 285 C310 230 250 140 250 140Z" fill="#ffffff" opacity="0.35"/>
+            <g transform="translate(330,120)">
+              <circle cx="40" cy="40" r="28" fill="none" stroke="#48CAE4" stroke-width="8"/>
+              <g fill="#48CAE4">
+                <rect x="34" y="0" width="12" height="18" rx="2"/>
+                <rect x="34" y="62" width="12" height="18" rx="2"/>
+                <rect x="0" y="34" width="18" height="12" rx="2"/>
+                <rect x="62" y="34" width="18" height="12" rx="2"/>
+                <rect x="8" y="8" width="12" height="18" rx="2" transform="rotate(-45 14 17)"/>
+                <rect x="60" y="54" width="12" height="18" rx="2" transform="rotate(-45 66 63)"/>
+                <rect x="54" y="8" width="18" height="12" rx="2" transform="rotate(-45 63 14)"/>
+                <rect x="8" y="60" width="18" height="12" rx="2" transform="rotate(-45 17 66)"/>
+              </g>
+            </g>
+            <g transform="translate(90,280) rotate(-30)">
+              <rect x="0" y="30" width="140" height="18" rx="9" fill="#168AAD"/>
+              <circle cx="0" cy="39" r="28" fill="none" stroke="#168AAD" stroke-width="16"/>
+            </g>
+          </svg>
+        </div>
+        <div>
+          <span class="section-eyebrow" style="color:var(--color-cyan)">Scheduled Maintenance</span>
+          <h1 style="margin-top:10px">We'll Be Back Shortly</h1>
+          <p style="color:rgba(232,247,250,0.82);max-width:54ch;margin:14px 0 0;font-size:1.05rem">
+            AquaPure is performing scheduled maintenance to improve performance and reliability. Thanks for your patience.
+          </p>
+          <div class="countdown" id="countdown" aria-label="Estimated maintenance countdown" style="margin-top:22px;justify-content:flex-start">
+            <div class="countdown-box"><span class="countdown-num" id="cdDays">00</span><span class="countdown-label">Days</span></div>
+            <div class="countdown-box"><span class="countdown-num" id="cdHours">00</span><span class="countdown-label">Hours</span></div>
+            <div class="countdown-box"><span class="countdown-num" id="cdMinutes">00</span><span class="countdown-label">Minutes</span></div>
+            <div class="countdown-box"><span class="countdown-num" id="cdSeconds">00</span><span class="countdown-label">Seconds</span></div>
+          </div>
+          <form id="notifyForm" style="display:flex;gap:10px;flex-wrap:wrap;max-width:460px;margin:22px 0 0" novalidate>
+            <input type="email" id="notifyEmail" class="newsletter-input" placeholder="Enter your email for update" aria-label="Email for launch notification" required>
+            <button type="submit" class="btn btn--aqua">Notify Me</button>
+          </form>
+          <p class="form-disclaimer" style="color:rgba(232,247,250,0.62);margin-top:10px">
+            Demo only - email is validated locally (no messages sent).
+          </p>
+          <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+            <a href="index.html" class="btn btn--white">Back to Home</a>
+            <a href="contact.html" class="btn btn--ghost-light">Urgent Enquiry</a>
+          </div>
+        </div>
       </div>
     </main>
 
