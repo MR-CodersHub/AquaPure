@@ -9,6 +9,13 @@
 
   const STORAGE_THEME = 'aquapure-theme';
   const STORAGE_DIR = 'aquapure-dir';
+  const inPagesDir = (() => {
+    const scriptSrc = document.currentScript?.getAttribute('src') || '';
+    const cleanPath = window.location.pathname.replace(/\\/g, '/');
+    return scriptSrc.startsWith('../') || /\/pages\/[^/]*$/.test(cleanPath);
+  })();
+  const assetBase = inPagesDir ? '../' : '';
+  const pageBase = inPagesDir ? '' : 'pages/';
 
   function initTheme() {
     const saved = localStorage.getItem(STORAGE_THEME) || 'light';
@@ -69,11 +76,11 @@
   }
 
   function initActiveNav() {
-    const path = window.location.pathname.split('/').pop() || 'index.html';
+    const path = window.location.pathname.replace(/\\/g, '/').split('/').pop() || 'index.html';
     document.querySelectorAll('.primary-nav .nav-link, .mobile-nav-list .mobile-nav-link').forEach((link) => {
       const href = link.getAttribute('href');
       if (!href || href === '#' || href.includes('#')) return;
-      const targetPage = href.split('#')[0];
+      const targetPage = href.split('#')[0].split('?')[0].split('/').pop() || 'index.html';
       if (targetPage === path) {
         link.classList.add('active');
         link.setAttribute('aria-current', 'page');
@@ -131,9 +138,13 @@
       toggle.classList.add('open');
       toggle.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden';
+      closeBtn?.focus({ preventScroll: true });
     };
 
     const closeMenu = () => {
+      if (document.activeElement && overlay.contains(document.activeElement)) {
+        toggle.focus({ preventScroll: true });
+      }
       overlay.classList.remove('open');
       overlay.setAttribute('aria-hidden', 'true');
       toggle.classList.remove('open');
@@ -427,10 +438,10 @@
       titleEl.textContent = data.title;
       summaryEl.textContent = data.summary;
       if (overviewEl) overviewEl.textContent = data.overview;
-      if (heroImgEl) heroImgEl.src = data.img;
+      if (heroImgEl) heroImgEl.src = `${assetBase}${data.img}`;
       if (breadcrumbEl) breadcrumbEl.textContent = data.breadcrumb;
       if (enquireLink) {
-        enquireLink.href = `contact.html?enquiry=${encodeURIComponent(data.enquiryType)}`;
+        enquireLink.href = `${pageBase}contact.html?enquiry=${encodeURIComponent(data.enquiryType)}`;
       }
       switcher.forEach((btn) => {
         btn.classList.toggle('active', btn.dataset.serviceKey === key);

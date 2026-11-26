@@ -7,6 +7,14 @@
 (() => {
   'use strict';
 
+  const inPagesDir = (() => {
+    const scriptSrc = document.currentScript?.getAttribute('src') || '';
+    const cleanPath = window.location.pathname.replace(/\\/g, '/');
+    return scriptSrc.startsWith('../') || /\/pages\/[^/]*$/.test(cleanPath);
+  })();
+  const assetBase = inPagesDir ? '../' : '';
+  const pageBase = inPagesDir ? '' : 'pages/';
+
   const PRODUCTS = [
     {
       id: 'ap-dom-pure-1',
@@ -272,8 +280,8 @@
             <ul id="modalProductHighlights" class="feature-list" style="margin-bottom:20px"></ul>
             <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:18px">Exact sizing, capacities, and component specifications are confirmed upon water source assessment and consultation.</p>
             <div style="display:flex;gap:10px;flex-wrap:wrap">
-              <a id="modalEnquireBtn" href="contact.html" class="btn btn--primary">Enquire About This System</a>
-              <a id="modalServiceBtn" href="service-details.html" class="btn btn--secondary">Related Service Info</a>
+              <a id="modalEnquireBtn" href="${pageBase}contact.html" class="btn btn--primary">Enquire About This System</a>
+              <a id="modalServiceBtn" href="${pageBase}service-details.html" class="btn btn--secondary">Related Service Info</a>
             </div>
           </div>
         </div>
@@ -299,7 +307,7 @@
 
   function openProductModal(product) {
     const backdrop = ensureProductModal();
-    backdrop.querySelector('#modalProductImg').src = product.image;
+    backdrop.querySelector('#modalProductImg').src = `${assetBase}${product.image}`;
     backdrop.querySelector('#modalProductImg').alt = product.name;
     backdrop.querySelector('#modalProductCat').textContent = CATEGORY_LABELS[product.category] || product.category;
     backdrop.querySelector('#modalProductTitle').textContent = product.name;
@@ -310,8 +318,8 @@
       .map((item) => `<li class="feature-item"><span class="feature-check">&#10003;</span><span>${item}</span></li>`)
       .join('');
 
-    backdrop.querySelector('#modalEnquireBtn').href = `contact.html?enquiry=Product+Enquiry&product=${encodeURIComponent(product.name)}`;
-    backdrop.querySelector('#modalServiceBtn').href = product.serviceLink;
+    backdrop.querySelector('#modalEnquireBtn').href = `${pageBase}contact.html?enquiry=Product+Enquiry&product=${encodeURIComponent(product.name)}`;
+    backdrop.querySelector('#modalServiceBtn').href = `${pageBase}${product.serviceLink}`;
 
     backdrop.classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -356,7 +364,7 @@
         (product) => `
       <article class="product-card reveal visible">
         <div class="product-card-media">
-          <img src="${product.image}" alt="${product.name}" loading="lazy">
+          <img src="${assetBase}${product.image}" alt="${product.name}" loading="lazy">
           ${product.badge ? `<span class="product-card-badge">${product.badge}</span>` : ''}
         </div>
         <div class="product-card-body">
@@ -368,7 +376,7 @@
           </div>
           <div class="product-card-actions">
             <button type="button" class="btn btn--secondary btn--sm" data-view-product="${product.id}">View Details</button>
-            <a href="contact.html?enquiry=Product+Enquiry&product=${encodeURIComponent(product.name)}" class="btn btn--primary btn--sm">Enquire</a>
+            <a href="${pageBase}contact.html?enquiry=Product+Enquiry&product=${encodeURIComponent(product.name)}" class="btn btn--primary btn--sm">Enquire</a>
           </div>
         </div>
       </article>

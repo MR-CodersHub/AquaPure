@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AquaPure scheduled system maintenance notice, return countdown, and update notification.">
+  <title>Scheduled Maintenance | AquaPure</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+
+<body>
+  <div class="coming-soon-shell">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+
+    <header class="container maint-header">
+      <a href="../index.html" class="logo" aria-label="AquaPure – Clarity in Every Drop.">
+        <span class="logo-mark" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 36 36" fill="none">
+            <path d="M18 3C18 3 7 14.5 7 22C7 28.075 11.925 33 18 33C24.075 33 29 28.075 29 22C29 14.5 18 3 18 3Z" fill="url(#csDrop)"/>
+            <path d="M18 11C18 11 12 17.5 12 22C12 25.314 14.686 28 18 28C21.314 28 24 25.314 24 22C24 17.5 18 11 18 11Z" fill="rgba(255,255,255,0.34)"/>
+            <defs>
+              <linearGradient id="csDrop" x1="18" y1="3" x2="18" y2="33" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#48CAE4"/>
+                <stop offset="1" stop-color="#168AAD"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-brand-group">
+          <span class="logo-text">Aqua<span class="logo-accent">Pure</span></span>
+          <span class="logo-tagline">Clarity in Every Drop.</span>
+        </span>
+      </a>
+
+      <div class="maint-header-actions">
+        <button type="button" class="icon-btn rtl-toggle" id="rtlToggle" aria-label="Toggle RTL layout">RTL</button>
+        <a href="../index.html" class="btn btn--ghost-light btn--sm">Back to Home</a>
+      </div>
+    </header>
+
+    <main class="coming-soon-main">
+      <div class="maint-grid">
+        <div class="maint-content">
+          <span class="maint-status-pill">
+            <span class="error-status-dot" aria-hidden="true"></span>
+            Scheduled System Upgrade
+          </span>
+          <h1>Refining Flow for Sharper Clarity.</h1>
+          <p class="maint-desc">
+            AquaPure is carrying out planned digital infrastructure maintenance to keep our product catalogue and
+            consultation workflows fast and dependable. Thank you for your patience.
+          </p>
+
+          <div class="countdown" id="countdown" aria-label="Estimated maintenance countdown">
+            <div class="countdown-box">
+              <span class="countdown-num" id="cdDays">00</span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-num" id="cdHours">04</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-num" id="cdMinutes">30</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-num" id="cdSeconds">00</span>
+              <span class="countdown-label">Seconds</span>
+            </div>
+          </div>
+
+          <div class="maint-notify-card">
+            <form id="notifyForm" class="maint-notify-form" novalidate>
+              <input type="email" id="notifyEmail" class="newsletter-input" placeholder="Enter your email for launch alert"
+                aria-label="Email for maintenance completion alert" required>
+              <button type="submit" class="btn btn--aqua">Notify Me</button>
+            </form>
+            <p class="maint-notify-note">
+              Front-end demonstration only — email is validated locally and not transmitted.
+            </p>
+          </div>
+
+          <div class="maint-actions">
+            <a href="../index.html" class="btn btn--white btn--lg">Back to Home</a>
+            <a href="contact.html" class="btn btn--ghost-light btn--lg">Urgent Enquiry</a>
+          </div>
+        </div>
+
+        <aside class="maint-panel" aria-label="Maintenance illustration and status">
+          <div class="maint-illustration">
+            <svg viewBox="0 0 360 300" role="img" aria-label="AquaPure purification precision calibration illustration">
+              <defs>
+                <linearGradient id="maintRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#48CAE4"/>
+                  <stop offset="100%" stop-color="#168AAD"/>
+                </linearGradient>
+                <linearGradient id="maintDropGrad" x1="180" y1="78" x2="180" y2="218" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#90E0EF"/>
+                  <stop offset="100%" stop-color="#168AAD"/>
+                </linearGradient>
+              </defs>
+              <circle cx="180" cy="150" r="124" fill="rgba(72,202,228,0.06)" stroke="rgba(72,202,228,0.28)" stroke-width="1.5"/>
+              <g class="maint-spin-slow">
+                <circle cx="180" cy="150" r="102" fill="none" stroke="url(#maintRingGrad)" stroke-width="2" stroke-dasharray="10 8"/>
+                <circle cx="180" cy="48" r="5" fill="#48CAE4"/>
+                <circle cx="282" cy="150" r="4" fill="#90E0EF"/>
+                <circle cx="180" cy="252" r="5" fill="#2A9D8F"/>
+                <circle cx="78" cy="150" r="4" fill="#48CAE4"/>
+              </g>
+              <circle cx="180" cy="150" r="78" fill="rgba(11,31,48,0.65)" stroke="rgba(144,224,239,0.35)" stroke-width="1.5"/>
+              <path d="M180 86C180 86 136 134 136 164A44 44 0 00224 164C224 134 180 86 180 86Z" fill="url(#maintDropGrad)"/>
+              <path d="M180 116C180 116 154 145 154 164A26 26 0 00206 164C206 145 180 116 180 116Z" fill="rgba(255,255,255,0.28)"/>
+              <path d="M167 166l9 9 18-20" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+
+          <ul class="maint-checklist" role="list">
+            <li class="maint-check-item">
+              <span>Navigation &amp; Route Alignment</span>
+              <span class="maint-check-badge">In Progress</span>
+            </li>
+            <li class="maint-check-item">
+              <span>Products &amp; Service Specifications</span>
+              <span class="maint-check-badge maint-check-badge--teal">Protected</span>
+            </li>
+            <li class="maint-check-item">
+              <span>Direct Consultation Requests</span>
+              <span class="maint-check-badge">Available</span>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="container maint-footer">
+      <span>&copy; 2026 AquaPure &mdash; Clarity in Every Drop.</span>
+      <div class="maint-footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </footer>
+  </div>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script>
+    (() => {
+      const target = Date.now() + (4 * 60 + 30) * 60 * 1000;
+      const update = () => {
+        const diff = Math.max(0, target - Date.now());
+        document.getElementById('cdDays').textContent = String(Math.floor(diff / 86400000)).padStart(2, '0');
+        document.getElementById('cdHours').textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0');
+        document.getElementById('cdMinutes').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+        document.getElementById('cdSeconds').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+      };
+      update();
+      setInterval(update, 1000);
+
+      document.getElementById('notifyForm')?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const input = document.getElementById('notifyEmail');
+        const val = input?.value.trim() || '';
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+          window.showToast?.('Please enter a valid email address.', 'error');
+          input?.focus();
+          return;
+        }
+        input.value = '';
+        window.showToast?.('Email recorded in this front-end demonstration.', 'success', 4500);
+      });
+    })();
+  </script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
