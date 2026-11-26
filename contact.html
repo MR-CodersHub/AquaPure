@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact AquaPure for water purification enquiries, installation requests, water quality testing, filter replacement, and industrial RO consultation.">
+  <title>Contact Us – Enquiries &amp; Consultation | AquaPure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="AquaPure Home">
+        <span class="logo-mark" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 36 36" fill="none"><path d="M18 3C18 3 7 14.5 7 22C7 28.075 11.925 33 18 33C24.075 33 29 28.075 29 22C29 14.5 18 3Z" fill="url(#navDropContact)"/><defs><linearGradient id="navDropContact" x1="18" y1="3" x2="18" y2="33" gradientUnits="userSpaceOnUse"><stop stop-color="#48CAE4"/><stop offset="1" stop-color="#168AAD"/></linearGradient></defs></svg></span>
+        <span class="logo-text">Aqua<span class="logo-accent">Pure</span></span>
+      </a>
+      <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+        <ul class="nav-list" role="list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="has-dropdown">
+            <a href="home2.html" class="nav-link" aria-haspopup="true" aria-expanded="false">Solutions <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <ul class="dropdown-menu" role="list">
+              <li><a href="services.html#products" class="dropdown-link">Products Catalogue</a></li>
+              <li><a href="home2.html#domestic-solutions" class="dropdown-link">Domestic Purification</a></li>
+              <li><a href="home2.html#commercial" class="dropdown-link">Commercial RO Systems</a></li>
+              <li><a href="home2.html#industrial" class="dropdown-link">Industrial Water Treatment</a></li>
+              <li><a href="home2.html#industries" class="dropdown-link">Industries We Serve</a></li>
+            </ul>
+          </li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button type="button" class="icon-btn rtl-toggle" id="rtlToggle" aria-label="Toggle RTL layout">RTL</button>
+        <a href="login.html" class="btn btn--secondary btn-nav-login">Sign In</a>
+        <a href="contact.html" class="btn btn--primary btn-nav-cta">Request a Consultation</a>
+        <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true">
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-top">
+        <span class="logo-text" style="color:#fff">Aqua<span style="color:#48CAE4">Pure</span></span>
+        <button type="button" class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-list" role="list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+        <li>
+          <button type="button" class="mobile-nav-link mobile-sub-toggle" aria-expanded="false"><span>Solutions</span><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="mobile-sub-list" hidden>
+            <li><a href="home2.html" class="mobile-sub-link">Specialized &amp; Industrial Overview</a></li>
+            <li><a href="services.html#products" class="mobile-sub-link">Products Catalogue</a></li>
+            <li><a href="home2.html#domestic-solutions" class="mobile-sub-link">Domestic Purification</a></li>
+            <li><a href="home2.html#commercial" class="mobile-sub-link">Commercial RO Systems</a></li>
+            <li><a href="home2.html#industrial" class="mobile-sub-link">Industrial Water Treatment</a></li>
+            <li><a href="home2.html#industries" class="mobile-sub-link">Industries We Serve</a></li>
+          </ul>
+        </li>
+        <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+        <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+        <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+        <li><a href="login.html" class="mobile-nav-link">Customer Sign In</a></li>
+      </ul>
+      <div class="mobile-nav-footer"><a href="contact.html" class="btn btn--aqua btn--full">Request a Consultation</a></div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- SECTION 1: CONTACT HERO -->
+    <section class="hero hero--dark hero--compact">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container hero-inner split-layout">
+        <div class="reveal">
+          <span class="section-eyebrow">Enquiries &amp; Consultation</span>
+          <h1>Let's Find the Right Water Solution for You.</h1>
+          <p class="hero-desc">
+            Share your water source details, customer segment, and service requirements—whether for a household purifier, commercial RO installation, testing enquiry, or industrial plant specification.
+          </p>
+          <div class="hero-actions">
+            <a href="#enquiry" class="btn btn--aqua">Open Enquiry Form</a>
+            <a href="#services-request" class="btn btn--ghost-light">Quick Service Requests</a>
+          </div>
+        </div>
+        <div class="media-frame reveal reveal-delay-1">
+          <img src="images/pure-water-macro.jpg" alt="Clean flowing water ripples reflecting aqua tones" data-lightbox>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CONTACT INFORMATION -->
+    <section class="section section--subtle" id="contact-info">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="section-eyebrow">Direct Channels</span>
+          <h2>Contact Information</h2>
+          <p class="section-subheading">Replace the editable placeholders below with your verified regional business details before deployment.</p>
+        </div>
+
+        <div class="grid-4">
+          <article class="card reveal">
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="card-title">Office Address</h3>
+            <p class="card-text">[Insert Verified Office Street, City &amp; Postal Code]</p>
+          </article>
+
+          <article class="card reveal reveal-delay-1">
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="card-title">Phone Number</h3>
+            <p class="card-text">[Insert Primary Phone Number]</p>
+          </article>
+
+          <article class="card reveal reveal-delay-2">
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="card-title">Email Address</h3>
+            <p class="card-text">[Insert Official Contact Email]</p>
+          </article>
+
+          <article class="card reveal reveal-delay-3">
+            <div class="card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="card-title">Hours &amp; WhatsApp</h3>
+            <p class="card-text">Business Hours: [Mon–Sat, 9:00 AM – 6:00 PM]<br>WhatsApp: [Optional Business Number]</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: ENQUIRY FORM -->
+    <section class="section" id="enquiry">
+      <div class="container split-layout split-layout--60-40" style="align-items:start">
+        <div class="card card--static reveal">
+          <span class="section-eyebrow">Consultation Request</span>
+          <h2 style="margin-bottom:8px">Water Treatment Enquiry Form</h2>
+          <p style="color:var(--text-muted);margin-bottom:24px">
+            Fields marked with <span style="color:#d94848">*</span> are required. Complete your project details for client-side validation.
+          </p>
+
+          <form id="enquiryForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="fullName">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 555 0100" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="customerType">Customer Type <span class="required">*</span></label>
+                <select id="customerType" name="customerType" class="form-select" required>
+                  <option value="">Select Customer Type</option>
+                  <option value="Residential">Residential</option>
+                  <option value="Commercial">Commercial</option>
+                  <option value="Industrial">Industrial</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="enquiryType">Enquiry Type <span class="required">*</span></label>
+                <select id="enquiryType" name="enquiryType" class="form-select" required>
+                  <option value="">Select Enquiry Type</option>
+                  <option value="Product Enquiry">Product Enquiry</option>
+                  <option value="Installation">Installation</option>
+                  <option value="Water Quality Testing">Water Quality Testing</option>
+                  <option value="Maintenance">Maintenance</option>
+                  <option value="Filter Replacement">Filter Replacement</option>
+                  <option value="Industrial RO Plant">Industrial RO Plant</option>
+                  <option value="General Consultation">General Consultation</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="productInterest">Product or Service of Interest</label>
+                <input type="text" id="productInterest" name="productInterest" class="form-input" placeholder="e.g., Commercial Skid RO, Filter Kit">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="userLocation">Location</label>
+                <input type="text" id="userLocation" name="location" class="form-input" placeholder="City / Industrial Zone / Area">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="waterSource">Water Source</label>
+                <input type="text" id="waterSource" name="waterSource" class="form-input" placeholder="e.g., Municipal, Borewell, Tanker">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="consultationDate">Preferred Consultation Date</label>
+              <input type="date" id="consultationDate" name="consultationDate" class="form-input">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Message <span class="required">*</span></label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Describe your water quality concerns, daily volume needs, or service question..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg btn--full">Submit Enquiry</button>
+
+            <div id="enquiryStatusBanner" class="form-status-banner form-status-banner--success" role="status"></div>
+            <p class="form-disclaimer">
+              Front-end demonstration notice: This static website validates form inputs locally and does not transmit enquiries without connecting a backend endpoint.
+            </p>
+          </form>
+        </div>
+
+        <aside class="reveal reveal-delay-1" style="display:flex;flex-direction:column;gap:20px">
+          <div class="card card--static card--accent-left">
+            <h3 style="margin-bottom:10px">Preparing Helpful Enquiry Details</h3>
+            <p class="card-text" style="margin-bottom:14px">Sharing a few quick details helps us give an accurate recommendation faster:</p>
+            <ul class="feature-list">
+              <li class="feature-item"><span class="feature-check">&#10003;</span><span>Source water origin (municipal line, borewell, or mixed tank)</span></li>
+              <li class="feature-item"><span class="feature-check">&#10003;</span><span>Approximate household size or facility daily water draw</span></li>
+              <li class="feature-item"><span class="feature-check">&#10003;</span><span>Any recent water test values if already available</span></li>
+              <li class="feature-item"><span class="feature-check">&#10003;</span><span>Existing purifier model for maintenance or cartridge swaps</span></li>
+            </ul>
+          </div>
+
+          <div class="card card--static" style="background:var(--bg-tinted)">
+            <h4 style="margin-bottom:8px">Need Pricing Guidance First?</h4>
+            <p class="card-text" style="margin-bottom:16px">Review how system pricing scales across domestic, commercial, and industrial projects.</p>
+            <a href="pricing.html" class="btn btn--secondary btn--sm">View Pricing Approach</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SECTION 4: REQUEST A SERVICE -->
+    <section class="section section--ice" id="services-request">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="section-eyebrow">Quick Prefill</span>
+          <h2>Request a Specific Service</h2>
+          <p class="section-subheading">Select a service category below to pre-select the enquiry form above and jump directly to it.</p>
+        </div>
+
+        <div class="grid-4">
+          <article class="card reveal">
+            <h3 class="card-title">Installation</h3>
+            <p class="card-text">Site planning and commissioning for domestic purifiers, commercial RO skids, or industrial plants.</p>
+            <button type="button" class="btn btn--secondary btn--sm" style="margin-top:16px" data-service-request="Installation">Select Installation</button>
+          </article>
+          <article class="card reveal reveal-delay-1">
+            <h3 class="card-title">Maintenance</h3>
+            <p class="card-text">Scheduled preventive inspections, valve checks, and operational performance observations.</p>
+            <button type="button" class="btn btn--secondary btn--sm" style="margin-top:16px" data-service-request="Maintenance">Select Maintenance</button>
+          </article>
+          <article class="card reveal reveal-delay-2">
+            <h3 class="card-title">Filter Replacement</h3>
+            <p class="card-text">Sediment, carbon, and polishing media replacements scoped around your installed system.</p>
+            <button type="button" class="btn btn--secondary btn--sm" style="margin-top:16px" data-service-request="Filter Replacement">Select Filter Swap</button>
+          </article>
+          <article class="card reveal reveal-delay-3">
+            <h3 class="card-title">Water Quality Testing</h3>
+            <p class="card-text">Source water evaluation enquiries before selecting purification or softening hardware.</p>
+            <button type="button" class="btn btn--secondary btn--sm" style="margin-top:16px" data-service-request="Water Quality Testing">Select Water Testing</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: LOCATION & MAP PLACEHOLDER -->
+    <section class="section section--subtle" id="location">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Location</span>
+          <h2>Office &amp; Service Location</h2>
+        </div>
+
+        <div class="map-placeholder reveal">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" style="color:var(--color-aqua)"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
+          <h3>Interactive Map Configuration Placeholder</h3>
+          <p style="color:var(--text-muted);max-width:52ch">
+            An interactive map embed will appear here once a verified street address and map coordinates are configured for your AquaPure branch.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: FAQ ACCORDION -->
+    <section class="section" id="faq">
+      <div class="container" style="max-width:880px">
+        <div class="section-header section-header--center reveal">
+          <span class="section-eyebrow">Frequently Asked Questions</span>
+          <h2>Common Enquiry &amp; Service Questions</h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <div class="faq-item open">
+            <button type="button" class="faq-question" aria-expanded="true">
+              <span>Which water purifier is suitable for my needs?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                The ideal purifier depends on your raw water source (municipal supply vs. borewell), dissolved solids level, hardness, household or commercial consumption, and available installation space. Share your source details with our team for a tailored recommendation.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Do you provide commercial RO systems?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. AquaPure supplies and installs commercial reverse osmosis skids suited for offices, restaurants, hospitality kitchens, clinics, and educational campuses. Equipment is matched to your daily usage demand.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Do you install industrial RO plants?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. We provide industrial RO plant planning, installation, and commissioning. Industrial treatment architecture depends directly on raw water quality, required capacity, pre-treatment stages, and operational conditions.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Can I request water quality testing?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes, you can submit a water quality testing enquiry through the form above. We review your water source origin and site requirements to advise appropriate assessment steps prior to choosing equipment.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Do you provide filter replacement and maintenance?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. AquaPure handles scheduled maintenance enquiries, filter cartridge swaps, system inspections, and repair requests. Exact service scope depends on your installed system and onsite assessment.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>How can I request a consultation?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Complete the enquiry form above with your customer type, water source, location, and preferred consultation date, or reach out via the listed phone or email placeholders once configured.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo footer-logo" aria-label="AquaPure Home">
+            <span class="logo-mark" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 36 36" fill="none"><path d="M18 3C18 3 7 14.5 7 22C7 28.075 11.925 33 18 33C24.075 33 29 28.075 29 22C29 14.5 18 3Z" fill="url(#footDropContact)"/><defs><linearGradient id="footDropContact" x1="18" y1="3" x2="18" y2="33" gradientUnits="userSpaceOnUse"><stop stop-color="#48CAE4"/><stop offset="1" stop-color="#168AAD"/></linearGradient></defs></svg></span>
+            <span class="logo-text">Aqua<span class="logo-accent">Pure</span></span>
+          </a>
+          <p class="footer-tagline">Engineering clean water solutions across domestic purifiers, commercial RO units, industrial water treatment plants, and preventive service care.</p>
+          <div class="footer-social">
+            <a href="contact.html" aria-label="Contact via enquiry form" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg></a>
+            <a href="contact.html#contact-info" aria-label="Phone and WhatsApp details" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg></a>
+            <a href="contact.html#location" aria-label="Office location" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Specialized Solutions</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services &amp; Products</a></li>
+            <li><a href="blog.html">Water Knowledge Blog</a></li>
+            <li><a href="pricing.html">Pricing &amp; Quotes</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Products</h4>
+          <ul class="footer-links">
+            <li><a href="services.html?category=domestic-purifier#products">Domestic Purifiers</a></li>
+            <li><a href="services.html?category=domestic-ro#products">Domestic RO Systems</a></li>
+            <li><a href="services.html?category=commercial-ro#products">Commercial RO Systems</a></li>
+            <li><a href="services.html?category=industrial-ro#products">Industrial RO Plants</a></li>
+            <li><a href="services.html?category=filtration#products">Filtration Systems</a></li>
+            <li><a href="services.html?category=softening#products">Water Softening</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Services &amp; Sectors</h4>
+          <ul class="footer-links">
+            <li><a href="service-details.html?service=ro-installation">RO Plant Installation</a></li>
+            <li><a href="service-details.html?service=water-testing">Water Quality Testing</a></li>
+            <li><a href="service-details.html?service=maintenance">Maintenance &amp; Filters</a></li>
+            <li><a href="home2.html#industries">Residential &amp; Commercial</a></li>
+            <li><a href="home2.html#industries">Hospitality &amp; Healthcare</a></li>
+            <li><a href="home2.html#industries">Manufacturing &amp; Food</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact &amp; Updates</h4>
+          <ul class="footer-contact-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg><span>[Office Address Placeholder]</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg><span>[Phone Number Placeholder]</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg><span>[Email Address Placeholder]</span></li>
+          </ul>
+          <h4 class="footer-heading footer-heading--spaced">Newsletter</h4>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input type="email" class="newsletter-input" placeholder="Your email address" aria-label="Email address for newsletter" required>
+            <button type="submit" class="btn btn--aqua btn--sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 AquaPure. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="login.html">Customer Portal</a>
+          <a href="coming-soon.html">Maintenance Page</a>
+          <a href="contact.html#faq">Support FAQ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

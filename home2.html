@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore AquaPure's specialized domestic purification, commercial RO systems, industrial water treatment plants, and industries served.">
+  <title>Specialized Purification &amp; Industrial Solutions | AquaPure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="AquaPure Home">
+        <span class="logo-mark" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 36 36" fill="none">
+            <path d="M18 3C18 3 7 14.5 7 22C7 28.075 11.925 33 18 33C24.075 33 29 28.075 29 22C29 14.5 18 3Z" fill="url(#navDropHome2)"/>
+            <path d="M18 11C18 11 12 17.5 12 22C12 25.314 14.686 28 18 28C21.314 28 24 25.314 24 22C24 17.5 18 11Z" fill="rgba(255,255,255,0.34)"/>
+            <defs><linearGradient id="navDropHome2" x1="18" y1="3" x2="18" y2="33" gradientUnits="userSpaceOnUse"><stop stop-color="#48CAE4"/><stop offset="1" stop-color="#168AAD"/></linearGradient></defs>
+          </svg>
+        </span>
+        <span class="logo-text">Aqua<span class="logo-accent">Pure</span></span>
+      </a>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+        <ul class="nav-list" role="list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="has-dropdown">
+            <a href="home2.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+              Solutions
+              <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <ul class="dropdown-menu" role="list">
+              <li><a href="services.html#products" class="dropdown-link">Products Catalogue</a></li>
+              <li><a href="home2.html#domestic-solutions" class="dropdown-link">Domestic Purification</a></li>
+              <li><a href="home2.html#commercial" class="dropdown-link">Commercial RO Systems</a></li>
+              <li><a href="home2.html#industrial" class="dropdown-link">Industrial Water Treatment</a></li>
+              <li><a href="home2.html#industries" class="dropdown-link">Industries We Serve</a></li>
+            </ul>
+          </li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button type="button" class="icon-btn rtl-toggle" id="rtlToggle" aria-label="Toggle RTL layout">RTL</button>
+        <a href="login.html" class="btn btn--secondary btn-nav-login">Sign In</a>
+        <a href="contact.html" class="btn btn--primary btn-nav-cta">Request a Consultation</a>
+        <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true">
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-top">
+        <span class="logo-text" style="color:#fff">Aqua<span style="color:#48CAE4">Pure</span></span>
+        <button type="button" class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-list" role="list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+        <li>
+          <button type="button" class="mobile-nav-link mobile-sub-toggle" aria-expanded="false">
+            <span>Solutions</span>
+            <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg>
+          </button>
+          <ul class="mobile-sub-list" hidden>
+            <li><a href="home2.html" class="mobile-sub-link">Specialized &amp; Industrial Overview</a></li>
+            <li><a href="services.html#products" class="mobile-sub-link">Products Catalogue</a></li>
+            <li><a href="home2.html#domestic-solutions" class="mobile-sub-link">Domestic Purification</a></li>
+            <li><a href="home2.html#commercial" class="mobile-sub-link">Commercial RO Systems</a></li>
+            <li><a href="home2.html#industrial" class="mobile-sub-link">Industrial Water Treatment</a></li>
+            <li><a href="home2.html#industries" class="mobile-sub-link">Industries We Serve</a></li>
+          </ul>
+        </li>
+        <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+        <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+        <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+        <li><a href="login.html" class="mobile-nav-link">Customer Sign In</a></li>
+      </ul>
+      <div class="mobile-nav-footer">
+        <a href="contact.html" class="btn btn--aqua btn--full">Request a Consultation</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- SECTION 1: SPECIALIZED SOLUTIONS HERO -->
+    <section class="hero hero--dark">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container hero-inner split-layout">
+        <div class="reveal">
+          <span class="section-eyebrow">Specialized &amp; Industrial Purification</span>
+          <h1>Engineered Purification Built for Every Scale</h1>
+          <p class="hero-desc">
+            Whether safeguarding household drinking water, supplying consistent commercial RO volume, or conditioning heavy industrial process streams, AquaPure configures treatment solutions around real feed-water conditions.
+          </p>
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn--aqua btn--lg">Request a Consultation</a>
+            <a href="services.html#products" class="btn btn--ghost-light btn--lg">Explore Equipment</a>
+          </div>
+          <div class="hero-pillars">
+            <div class="hero-pillar">
+              <span class="hero-pillar-title">Domestic Units</span>
+              <span class="hero-pillar-sub">Under-sink &amp; countertop systems</span>
+            </div>
+            <div class="hero-pillar">
+              <span class="hero-pillar-title">Commercial Skids</span>
+              <span class="hero-pillar-sub">Hospitality, dining &amp; institutions</span>
+            </div>
+            <div class="hero-pillar">
+              <span class="hero-pillar-title">Industrial RO Plants</span>
+              <span class="hero-pillar-sub">Source-matched custom engineering</span>
+            </div>
+          </div>
+        </div>
+        <div class="media-frame media-frame--tall reveal reveal-delay-1">
+          <img src="images/industrial-plant.jpg" alt="Industrial reverse osmosis treatment plant piping and stainless steel housings" data-lightbox>
+          <div class="media-hud">
+            <span class="media-hud-label">
+              <span class="pulse-dot" aria-hidden="true"></span>
+              High-Capacity Membrane &amp; Pre-Treatment Array
+            </span>
+            <span class="media-hud-tag">Industrial Grade</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: DOMESTIC WATER PURIFICATION -->
+    <section class="section section--subtle" id="domestic-solutions">
+      <div class="container split-layout split-layout--60-40">
+        <div class="reveal">
+          <span class="section-eyebrow">01 / Residential Purification</span>
+          <h2>Clean, Balanced Water for Modern Households</h2>
+          <p style="color:var(--text-muted);margin-bottom:16px">
+            Municipal and groundwater supplies often carry varying levels of sediment, chlorine taste, hardness minerals, and dissolved solids. AquaPure's domestic water purifiers and under-sink RO systems pair multi-stage filtration with compact point-of-use convenience.
+          </p>
+          <p style="color:var(--text-muted);margin-bottom:22px">
+            Every residential recommendation considers your incoming water profile, kitchen layout, and routine cartridge maintenance so families enjoy reliable daily drinking and cooking water.
+          </p>
+          <ul class="feature-list" style="margin-bottom:28px">
+            <li class="feature-item"><span class="feature-check">&#10003;</span><span>Countertop, wall-mount, and concealed under-sink options</span></li>
+            <li class="feature-item"><span class="feature-check">&#10003;</span><span>Multi-stage sediment, activated carbon, and RO membrane options</span></li>
+            <li class="feature-item"><span class="feature-check">&#10003;</span><span>Clean technician installation and scheduled cartridge replacement</span></li>
+          </ul>
+          <a href="services.html?category=domestic-ro#products" class="btn btn--primary">View Domestic Systems</a>
+        </div>
+        <div class="media-frame reveal reveal-delay-1">
+          <img src="images/domestic-purifier.jpg" alt="Domestic water purifier pouring pure drinking water in a kitchen" loading="lazy" data-lightbox>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: COMMERCIAL RO SYSTEMS -->
+    <section class="section" id="commercial">
+      <div class="container split-layout split-layout--40-60">
+        <div class="media-frame reveal">
+          <img src="images/commercial-ro.jpg" alt="Compact stainless steel commercial reverse osmosis skid with FRP housings" loading="lazy" data-lightbox>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <span class="section-eyebrow">02 / Commercial RO Systems</span>
+          <h2>Scalable Water Purity for Business &amp; Institutions</h2>
+          <p style="color:var(--text-muted);margin-bottom:16px">
+            Offices, restaurants, cafés, clinics, and educational campuses rely on dependable water quality for beverages, food preparation, and daily staff hydration without frequent bottlenecks.
+          </p>
+          <p style="color:var(--text-muted);margin-bottom:22px">
+            AquaPure commercial RO systems are configured according to peak daily demand, kitchen or utility footprint, and raw water composition—ensuring clean equipment protection and straightforward servicing.
+          </p>
+          <div class="grid-2" style="margin-bottom:26px">
+            <div class="card card--static" style="padding:18px">
+              <h4 style="font-size:0.98rem;margin-bottom:6px">Application-Matched Sizing</h4>
+              <p class="card-text" style="font-size:0.86rem">Selected around peak hourly draw and storage tank capacity.</p>
+            </div>
+            <div class="card card--static" style="padding:18px">
+              <h4 style="font-size:0.98rem;margin-bottom:6px">Planned Upkeep</h4>
+              <p class="card-text" style="font-size:0.86rem">Service schedules structured around operating hours and feed TDS.</p>
+            </div>
+          </div>
+          <a href="services.html?category=commercial-ro#products" class="btn btn--primary">Browse Commercial Units</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: INDUSTRIAL WATER TREATMENT -->
+    <section class="section section--navy" id="industrial">
+      <div class="container split-layout">
+        <div class="reveal">
+          <span class="section-eyebrow">03 / Industrial Water Treatment</span>
+          <h2>Site-Engineered RO Plants &amp; Pre-Treatment Trains</h2>
+          <p style="margin-bottom:16px">
+            Industrial water treatment cannot be pulled off a generic catalog shelf. System selection depends directly on your water source, chemical profile, target throughput capacity, recovery expectations, and plant operating hours.
+          </p>
+          <p style="margin-bottom:24px">
+            AquaPure coordinates pre-filtration vessels, antiscalant dosing, membrane housings, post-treatment conditioning, and instrumentation into a cohesive skid built for dependable plant integration.
+          </p>
+          <ul class="feature-list" style="margin-bottom:28px">
+            <li class="feature-item"><span class="feature-check">&#10003;</span><span>Designed around raw water source evaluation and process requirements</span></li>
+            <li class="feature-item"><span class="feature-check">&#10003;</span><span>Integrated sand, carbon, softening, and chemical dosing pre-treatment</span></li>
+            <li class="feature-item"><span class="feature-check">&#10003;</span><span>Full mechanical installation, hydraulic flushing, and commissioning</span></li>
+          </ul>
+          <a href="service-details.html?service=ro-installation" class="btn btn--teal">Industrial Installation Details</a>
+        </div>
+        <div class="media-frame reveal reveal-delay-1">
+          <img src="images/hero-facility.jpg" alt="Industrial water treatment facility with vertical membrane housings" loading="lazy" data-lightbox>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: INDUSTRIES WE SERVE -->
+    <section class="section section--ice" id="industries">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="section-eyebrow">Sector Applications</span>
+          <h2>Industries &amp; Environments We Serve</h2>
+          <p class="section-subheading">
+            Clean, conditioned water engineered for distinct residential, institutional, and industrial operational standards.
+          </p>
+        </div>
+
+        <div class="industry-grid">
+          <article class="industry-card reveal">
+            <img src="images/domestic-purifier.jpg" alt="Residential water purification" loading="lazy">
+            <div class="industry-card-content">
+              <h3>Residential</h3>
+              <p>Point-of-use purifiers and under-sink RO systems for apartments and villas.</p>
+            </div>
+          </article>
+          <article class="industry-card reveal reveal-delay-1">
+            <img src="images/commercial-ro.jpg" alt="Commercial office water treatment" loading="lazy">
+            <div class="industry-card-content">
+              <h3>Commercial</h3>
+              <p>Consistent drinking and utility water systems for offices and retail centers.</p>
+            </div>
+          </article>
+          <article class="industry-card reveal reveal-delay-2">
+            <img src="images/hospitality-water.jpg" alt="Hospitality water filtration" loading="lazy">
+            <div class="industry-card-content">
+              <h3>Hospitality</h3>
+              <p>Softened and purified water for hotels, commercial kitchens, and guest services.</p>
+            </div>
+          </article>
+          <article class="industry-card reveal reveal-delay-3">
+            <img src="images/healthcare-water.jpg" alt="Healthcare water treatment" loading="lazy">
+            <div class="industry-card-content">
+              <h3>Healthcare</h3>
+              <p>Reliable multi-stage treatment supporting clinics and patient care facilities.</p>
+            </div>
+          </article>
+          <article class="industry-card reveal">
+            <img src="images/water-testing.jpg" alt="Educational institution water system" loading="lazy">
+            <div class="industry-card-content">
+              <h3>Educational Institutions</h3>
+              <p>Safe campus hydration systems designed for schools and universities.</p>
+            </div>
+          </article>
+          <article class="industry-card reveal reveal-delay-1">
+            <img src="images/manufacturing-water.jpg" alt="Manufacturing water plant" loading="lazy">
+            <div class="industry-card-content">
+              <h3>Manufacturing</h3>
+              <p>Process feed conditioning, cooling makeup, and industrial RO capacity.</p>
+            </div>
+          </article>
+          <article class="industry-card reveal reveal-delay-2">
+            <img src="images/filtration-system.jpg" alt="Food and beverage water purification" loading="lazy">
+            <div class="industry-card-content">
+              <h3>Food &amp; Beverage</h3>
+              <p>Ingredient water polishing, carbon filtration, and dissolved solids control.</p>
+            </div>
+          </article>
+          <article class="industry-card reveal reveal-delay-3">
+            <img src="images/industrial-plant.jpg" alt="Specialized industrial water treatment" loading="lazy">
+            <div class="industry-card-content">
+              <h3>Other Industrial Applications</h3>
+              <p>Custom treatment configurations scoped around unique site conditions.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CONSULTATION CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div class="cta-band-bg">
+            <img src="images/pure-water-macro.jpg" alt="" aria-hidden="true" loading="lazy">
+          </div>
+          <div class="cta-band-inner">
+            <div>
+              <span class="section-eyebrow" style="color:var(--color-cyan)">Application Consultation</span>
+              <h2>Share Your Water Source &amp; Capacity Needs</h2>
+              <p>
+                Speak with our engineering team to review your feed water characteristics and obtain a tailored treatment recommendation.
+              </p>
+            </div>
+            <div class="cta-band-actions">
+              <a href="contact.html" class="btn btn--white btn--lg">Request a Consultation</a>
+              <a href="pricing.html" class="btn btn--ghost-light btn--lg">View Pricing Approach</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo footer-logo" aria-label="AquaPure Home">
+            <span class="logo-mark" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 36 36" fill="none">
+                <path d="M18 3C18 3 7 14.5 7 22C7 28.075 11.925 33 18 33C24.075 33 29 28.075 29 22C29 14.5 18 3Z" fill="url(#footDrop2)"/>
+                <defs><linearGradient id="footDrop2" x1="18" y1="3" x2="18" y2="33" gradientUnits="userSpaceOnUse"><stop stop-color="#48CAE4"/><stop offset="1" stop-color="#168AAD"/></linearGradient></defs>
+              </svg>
+            </span>
+            <span class="logo-text">Aqua<span class="logo-accent">Pure</span></span>
+          </a>
+          <p class="footer-tagline">Engineering clean water solutions across domestic purifiers, commercial RO units, industrial water treatment plants, and preventive service care.</p>
+          <div class="footer-social">
+            <a href="contact.html" aria-label="Contact via enquiry form" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg></a>
+            <a href="contact.html#contact-info" aria-label="Phone and WhatsApp details" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg></a>
+            <a href="contact.html#location" aria-label="Office location" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Specialized Solutions</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services &amp; Products</a></li>
+            <li><a href="blog.html">Water Knowledge Blog</a></li>
+            <li><a href="pricing.html">Pricing &amp; Quotes</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Products</h4>
+          <ul class="footer-links">
+            <li><a href="services.html?category=domestic-purifier#products">Domestic Purifiers</a></li>
+            <li><a href="services.html?category=domestic-ro#products">Domestic RO Systems</a></li>
+            <li><a href="services.html?category=commercial-ro#products">Commercial RO Systems</a></li>
+            <li><a href="services.html?category=industrial-ro#products">Industrial RO Plants</a></li>
+            <li><a href="services.html?category=filtration#products">Filtration Systems</a></li>
+            <li><a href="services.html?category=softening#products">Water Softening</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Services &amp; Sectors</h4>
+          <ul class="footer-links">
+            <li><a href="service-details.html?service=ro-installation">RO Plant Installation</a></li>
+            <li><a href="service-details.html?service=water-testing">Water Quality Testing</a></li>
+            <li><a href="service-details.html?service=maintenance">Maintenance &amp; Filters</a></li>
+            <li><a href="home2.html#industries">Residential &amp; Commercial</a></li>
+            <li><a href="home2.html#industries">Hospitality &amp; Healthcare</a></li>
+            <li><a href="home2.html#industries">Manufacturing &amp; Food</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact &amp; Updates</h4>
+          <ul class="footer-contact-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg><span>[Office Address Placeholder]</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg><span>[Phone Number Placeholder]</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg><span>[Email Address Placeholder]</span></li>
+          </ul>
+          <h4 class="footer-heading footer-heading--spaced">Newsletter</h4>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input type="email" class="newsletter-input" placeholder="Your email address" aria-label="Email address for newsletter" required>
+            <button type="submit" class="btn btn--aqua btn--sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 AquaPure. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="login.html">Customer Portal</a>
+          <a href="coming-soon.html">Maintenance Page</a>
+          <a href="contact.html#faq">Support FAQ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

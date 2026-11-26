@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read AquaPure's practical water purification guide explaining RO membranes, filtration stages, water quality evaluation, and routine system care.">
+  <title>Article Details – Water Knowledge &amp; Insights | AquaPure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="AquaPure Home">
+        <span class="logo-mark" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 36 36" fill="none"><path d="M18 3C18 3 7 14.5 7 22C7 28.075 11.925 33 18 33C24.075 33 29 28.075 29 22C29 14.5 18 3Z" fill="url(#navDropBD)"/><defs><linearGradient id="navDropBD" x1="18" y1="3" x2="18" y2="33" gradientUnits="userSpaceOnUse"><stop stop-color="#48CAE4"/><stop offset="1" stop-color="#168AAD"/></linearGradient></defs></svg></span>
+        <span class="logo-text">Aqua<span class="logo-accent">Pure</span></span>
+      </a>
+      <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+        <ul class="nav-list" role="list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="has-dropdown">
+            <a href="home2.html" class="nav-link" aria-haspopup="true" aria-expanded="false">Solutions <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <ul class="dropdown-menu" role="list">
+              <li><a href="services.html#products" class="dropdown-link">Products Catalogue</a></li>
+              <li><a href="home2.html#domestic-solutions" class="dropdown-link">Domestic Purification</a></li>
+              <li><a href="home2.html#commercial" class="dropdown-link">Commercial RO Systems</a></li>
+              <li><a href="home2.html#industrial" class="dropdown-link">Industrial Water Treatment</a></li>
+              <li><a href="home2.html#industries" class="dropdown-link">Industries We Serve</a></li>
+            </ul>
+          </li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button type="button" class="icon-btn rtl-toggle" id="rtlToggle" aria-label="Toggle RTL layout">RTL</button>
+        <a href="login.html" class="btn btn--secondary btn-nav-login">Sign In</a>
+        <a href="contact.html" class="btn btn--primary btn-nav-cta">Request a Consultation</a>
+        <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true">
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-top">
+        <span class="logo-text" style="color:#fff">Aqua<span style="color:#48CAE4">Pure</span></span>
+        <button type="button" class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-list" role="list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+        <li>
+          <button type="button" class="mobile-nav-link mobile-sub-toggle" aria-expanded="false"><span>Solutions</span><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="mobile-sub-list" hidden>
+            <li><a href="home2.html" class="mobile-sub-link">Specialized &amp; Industrial Overview</a></li>
+            <li><a href="services.html#products" class="mobile-sub-link">Products Catalogue</a></li>
+            <li><a href="home2.html#domestic-solutions" class="mobile-sub-link">Domestic Purification</a></li>
+            <li><a href="home2.html#commercial" class="mobile-sub-link">Commercial RO Systems</a></li>
+            <li><a href="home2.html#industrial" class="mobile-sub-link">Industrial Water Treatment</a></li>
+            <li><a href="home2.html#industries" class="mobile-sub-link">Industries We Serve</a></li>
+          </ul>
+        </li>
+        <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+        <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+        <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+        <li><a href="login.html" class="mobile-nav-link">Customer Sign In</a></li>
+      </ul>
+      <div class="mobile-nav-footer"><a href="contact.html" class="btn btn--aqua btn--full">Request a Consultation</a></div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- SECTION 1: ARTICLE HEADER -->
+    <section class="hero hero--light hero--compact">
+      <div class="container">
+        <div class="reveal" style="max-width:860px;margin-inline:auto">
+          <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li id="articleBreadcrumb">Understanding Domestic RO Water Purification</li>
+            </ol>
+          </nav>
+          <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px">
+            <span id="articleCategoryTag" class="tag">RO Technology</span>
+            <span style="font-size:0.84rem;color:var(--text-muted)">AquaPure Knowledge Guide</span>
+          </div>
+          <h1 id="articleTitle">Understanding Domestic RO Water Purification</h1>
+          <div class="media-frame media-frame--wide" style="margin-top:28px">
+            <img id="articleHeroImg" src="images/domestic-purifier.jpg" alt="Domestic reverse osmosis water purifier in a bright modern kitchen" data-lightbox>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ARTICLE INTRODUCTION -->
+    <section class="section" id="article-intro">
+      <div class="container article-layout">
+        <div class="article-body reveal">
+          <span class="section-eyebrow">Introduction</span>
+          <h2>Why Households Look Beyond Basic Sediment Screening</h2>
+          <p id="articleIntroP1">
+            Household water arrives through varied supply paths—treated municipal distribution lines, local storage tanks, or groundwater borewells. Along that journey, water can pick up suspended rust or grit, residual chlorine taste, calcium hardness, and elevated dissolved salts.
+          </p>
+          <p id="articleIntroP2">
+            Reverse osmosis (RO) has become one of the most widely adopted point-of-use purification technologies because it pairs mechanical sediment and carbon pre-stages with a fine semi-permeable membrane capable of separating dissolved solids that pass straight through ordinary mesh cartridges.
+          </p>
+        </div>
+
+        <aside class="article-sidebar reveal reveal-delay-1">
+          <div class="card card--static">
+            <h4 class="section-eyebrow" style="margin-bottom:10px">In This Guide</h4>
+            <ul class="toc-list">
+              <li><a href="#article-intro">Introduction &amp; Context</a></li>
+              <li><a href="#article-main">How Treatment Stages Work</a></li>
+              <li><a href="#article-takeaways">Key Takeaways</a></li>
+              <li><a href="#related-articles">Related Guides</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn--primary btn--full" style="margin-top:18px">Ask About Your Water</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SECTION 3: MAIN ARTICLE CONTENT -->
+    <section class="section section--subtle" id="article-main">
+      <div class="container">
+        <div class="article-body reveal" style="max-width:820px">
+          <span class="section-eyebrow">Technical Breakdown</span>
+          <h2 id="articleMainH1">How Multi-Stage Purification Protects Drinking Quality</h2>
+          <p id="articleMainP1">
+            A dependable domestic or commercial RO setup does not rely on the membrane alone. Incoming water first travels through a micron sediment barrier that traps visible sand, silt, and rust flakes, followed by an activated carbon block designed to absorb free chlorine and taste-altering organic compounds that would otherwise degrade membrane film.
+          </p>
+          <p id="articleMainP2">
+            Once pre-conditioned, feed pressure guides water molecules across the semi-permeable membrane, separating treated permeate water toward clean storage while routing concentrated dissolved minerals cleanly to drain. A final post-polishing or optional UV stage conditions the stored water just before dispensing.
+          </p>
+
+          <div class="card card--static" style="margin:28px 0;padding:24px;background:var(--bg-surface)">
+            <h3 style="margin-bottom:12px">Matching Configuration to Incoming Source Water</h3>
+            <p style="color:var(--text-muted);margin-bottom:14px">
+              Before choosing any domestic purifier, commercial skid, or plant unit, reviewing three practical inputs avoids oversizing or premature filter fouling:
+            </p>
+            <ul style="color:var(--text-muted);margin-bottom:0">
+              <li><strong>Source Water Type:</strong> Municipal supply versus borewell or mixed storage feeding the tap.</li>
+              <li><strong>Measured TDS &amp; Hardness:</strong> High dissolved solids or scale tendency dictate pre-treatment needs.</li>
+              <li><strong>Daily Volume &amp; Line Pressure:</strong> Household taps, café counters, and plant lines demand different throughput hardware.</li>
+            </ul>
+          </div>
+
+          <h3 id="articleMainH2">Routine Cartridge Care Keeps Output Consistent</h3>
+          <p id="articleMainP3">
+            Even high-grade membranes gradually slow down if upstream sediment and carbon cartridges are neglected past their practical service interval. Scheduling periodic checks and cartridge swaps maintains gentle membrane pressure and preserves crisp taste.
+          </p>
+
+          <div class="callout">
+            <strong>Consultation Note:</strong> Specific filtration stages, cartridge life, and recovery performance depend on raw feed water composition and daily operating demand. Contact AquaPure for recommendations tailored to your source water.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: KEY TAKEAWAYS -->
+    <section class="section section--ice" id="article-takeaways">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Summary</span>
+          <h2>Key Takeaways</h2>
+        </div>
+
+        <div class="grid-2">
+          <div class="card card--static card--accent-left reveal">
+            <h4>01. Layered Filtration Works Together</h4>
+            <p class="card-text">Sediment and activated carbon pre-stages safeguard RO membranes while improving overall taste and clarity.</p>
+          </div>
+          <div class="card card--static card--accent-teal reveal reveal-delay-1">
+            <h4>02. Source Assessment Comes First</h4>
+            <p class="card-text">Checking feed water origin and basic water quality parameters guides sensible system sizing without guesswork.</p>
+          </div>
+          <div class="card card--static card--accent-teal reveal">
+            <h4>03. Scale Matches Application</h4>
+            <p class="card-text">Domestic units, commercial skids, and industrial RO plants each address distinct pressure and capacity realities.</p>
+          </div>
+          <div class="card card--static card--accent-left reveal reveal-delay-1">
+            <h4>04. Preventive Care Sustains Flow</h4>
+            <p class="card-text">Timely filter cartridge replacements and valve checks protect downstream equipment across every sector.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: RELATED ARTICLES -->
+    <section class="section" id="related-articles">
+      <div class="container">
+        <div class="section-header section-header--split reveal">
+          <div>
+            <span class="section-eyebrow">Continue Reading</span>
+            <h2>Related Water Knowledge Guides</h2>
+          </div>
+          <a href="blog.html" class="btn btn--secondary">View All Articles</a>
+        </div>
+
+        <div class="grid-3">
+          <article class="blog-card reveal">
+            <img src="images/commercial-ro.jpg" class="blog-card-image" alt="Commercial reverse osmosis skid" loading="lazy">
+            <div class="blog-card-body">
+              <div><span class="tag">RO Technology</span></div>
+              <h3 class="blog-card-title">How Commercial RO Systems Work</h3>
+              <p class="blog-card-excerpt">Pre-treatment, pump staging, and sizing considerations for restaurants, offices, and institutions.</p>
+              <div class="blog-card-meta">
+                <span>Commercial Systems</span>
+                <a href="blog-details.html?article=commercial-ro" class="card-link" style="margin-top:0">Read Guide &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal reveal-delay-1">
+            <img src="images/water-testing.jpg" class="blog-card-image" alt="Water sample evaluation" loading="lazy">
+            <div class="blog-card-body">
+              <div><span class="tag tag--teal">Water Quality</span></div>
+              <h3 class="blog-card-title">Why Water Quality Testing Matters</h3>
+              <p class="blog-card-excerpt">Why evaluating raw water parameters before purchase leads to smarter, better-fitting treatment trains.</p>
+              <div class="blog-card-meta">
+                <span>Source Review</span>
+                <a href="blog-details.html?article=water-quality" class="card-link" style="margin-top:0">Read Guide &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal reveal-delay-2">
+            <img src="images/technician-service.jpg" class="blog-card-image" alt="Water technician inspecting filter housings" loading="lazy">
+            <div class="blog-card-body">
+              <div><span class="tag">Maintenance &amp; Care</span></div>
+              <h3 class="blog-card-title">Water Purifier Maintenance Tips</h3>
+              <p class="blog-card-excerpt">Simple checkpoints for recognizing cartridge wear, pressure shifts, and when to request servicing.</p>
+              <div class="blog-card-meta">
+                <span>System Care</span>
+                <a href="blog-details.html?article=maintenance-tips" class="card-link" style="margin-top:0">Read Guide &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CTA -->
+    <section class="section section--subtle">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div class="cta-band-bg">
+            <img src="images/pure-water-macro.jpg" alt="" aria-hidden="true" loading="lazy">
+          </div>
+          <div class="cta-band-inner">
+            <div>
+              <span class="section-eyebrow" style="color:var(--color-cyan)">Next Steps</span>
+              <h2>Ready to Select the Right Purification System?</h2>
+              <p>Explore our product categories or request a practical consultation tailored to your water source.</p>
+            </div>
+            <div class="cta-band-actions">
+              <a href="services.html#products" class="btn btn--white btn--lg">Explore Solutions</a>
+              <a href="contact.html" class="btn btn--ghost-light btn--lg">Request Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo footer-logo" aria-label="AquaPure Home">
+            <span class="logo-mark" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 36 36" fill="none"><path d="M18 3C18 3 7 14.5 7 22C7 28.075 11.925 33 18 33C24.075 33 29 28.075 29 22C29 14.5 18 3Z" fill="url(#footDropBD)"/><defs><linearGradient id="footDropBD" x1="18" y1="3" x2="18" y2="33" gradientUnits="userSpaceOnUse"><stop stop-color="#48CAE4"/><stop offset="1" stop-color="#168AAD"/></linearGradient></defs></svg></span>
+            <span class="logo-text">Aqua<span class="logo-accent">Pure</span></span>
+          </a>
+          <p class="footer-tagline">Engineering clean water solutions across domestic purifiers, commercial RO units, industrial water treatment plants, and preventive service care.</p>
+          <div class="footer-social">
+            <a href="contact.html" aria-label="Contact via enquiry form" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg></a>
+            <a href="contact.html#contact-info" aria-label="Phone and WhatsApp details" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg></a>
+            <a href="contact.html#location" aria-label="Office location" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Specialized Solutions</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services &amp; Products</a></li>
+            <li><a href="blog.html">Water Knowledge Blog</a></li>
+            <li><a href="pricing.html">Pricing &amp; Quotes</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Products</h4>
+          <ul class="footer-links">
+            <li><a href="services.html?category=domestic-purifier#products">Domestic Purifiers</a></li>
+            <li><a href="services.html?category=domestic-ro#products">Domestic RO Systems</a></li>
+            <li><a href="services.html?category=commercial-ro#products">Commercial RO Systems</a></li>
+            <li><a href="services.html?category=industrial-ro#products">Industrial RO Plants</a></li>
+            <li><a href="services.html?category=filtration#products">Filtration Systems</a></li>
+            <li><a href="services.html?category=softening#products">Water Softening</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Services &amp; Sectors</h4>
+          <ul class="footer-links">
+            <li><a href="service-details.html?service=ro-installation">RO Plant Installation</a></li>
+            <li><a href="service-details.html?service=water-testing">Water Quality Testing</a></li>
+            <li><a href="service-details.html?service=maintenance">Maintenance &amp; Filters</a></li>
+            <li><a href="home2.html#industries">Residential &amp; Commercial</a></li>
+            <li><a href="home2.html#industries">Hospitality &amp; Healthcare</a></li>
+            <li><a href="home2.html#industries">Manufacturing &amp; Food</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact &amp; Updates</h4>
+          <ul class="footer-contact-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg><span>[Office Address Placeholder]</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg><span>[Phone Number Placeholder]</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg><span>[Email Address Placeholder]</span></li>
+          </ul>
+          <h4 class="footer-heading footer-heading--spaced">Newsletter</h4>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input type="email" class="newsletter-input" placeholder="Your email address" aria-label="Email address for newsletter" required>
+            <button type="submit" class="btn btn--aqua btn--sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 AquaPure. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="login.html">Customer Portal</a>
+          <a href="coming-soon.html">Maintenance Page</a>
+          <a href="contact.html#faq">Support FAQ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const articles = {
+        'commercial-ro': {
+          title: 'How Commercial RO Systems Work',
+          cat: 'RO Technology',
+          img: 'images/commercial-ro.jpg',
+          p1: 'Commercial kitchens, cafés, office floors, clinics, and educational campuses need reliable purified water at steady hourly flow rates without taking up excessive utility room space.',
+          p2: 'Compact skid-mounted commercial RO assemblies bring together multi-media pre-filtration, booster pressurization, vertical FRP pressure vessels, and clean storage control in a serviceable stainless steel frame.',
+          h1: 'Balancing Peak Flow Demand With Storage & Recovery',
+          m1: 'Unlike household under-sink purifiers, commercial setups are sized around peak demand windows—such as morning beverage service or lunch rushes—paired with pressurized or level-controlled reserve tanks.',
+          m2: 'Monitoring inlet pressure and pre-filter differential pressure helps keep commercial membranes performing consistently throughout busy business hours.'
+        },
+        'industrial-treatment': {
+          title: 'Introduction to Industrial Water Treatment',
+          cat: 'Industrial Water Treatment',
+          img: 'images/hero-facility.jpg',
+          p1: 'Manufacturing lines, boiler makeup loops, food processing plants, and commercial complexes cannot rely on unconditioned municipal or groundwater directly.',
+          p2: 'Industrial treatment systems combine staged pre-filtration, antiscalant dosing, high-pressure RO trains, and post-treatment polishing tailored to each facility\'s raw water chemistry.',
+          h1: 'Why Source Water Analysis Drives Plant Engineering',
+          m1: 'Industrial water plants vary significantly in recovery ratios, vessel count, and chemical conditioning depending on hardness, silica, suspended solids, and seasonal water shifts.',
+          m2: 'Coordinated commissioning and routine operator logbooks give plant managers early visibility into differential pressure changes before downtime occurs.'
+        },
+        'water-quality': {
+          title: 'Why Water Quality Testing Matters',
+          cat: 'Water Quality',
+          img: 'images/water-testing.jpg',
+          p1: 'Choosing purification hardware without reviewing incoming water parameters often results in undersized pre-filters, persistent scaling, or unnecessary treatment stages.',
+          p2: 'Evaluating feed water characteristics upfront allows homeowners and engineering teams to select filtration media and RO membranes aligned with actual site conditions.',
+          h1: 'Key Observations Before Selecting Equipment',
+          m1: 'Basic screening of turbidity, hardness, chlorine presence, and total dissolved solids clarifies whether particulate screening, water softening, or reverse osmosis belongs in the treatment train.',
+          m2: 'Whenever deeper laboratory validation is warranted for commercial or industrial applications, AquaPure advises appropriate testing pathways upon enquiry.'
+        },
+        'filtration': {
+          title: 'Understanding Water Filtration',
+          cat: 'Industry Applications',
+          img: 'images/filtration-system.jpg',
+          p1: 'Not every water challenge requires identical treatment hardware. Mechanical sediment filtration, activated carbon adsorption, ultrafiltration, and water softening each solve distinct issues.',
+          p2: 'Understanding how each medium works ensures clean water clarity while protecting downstream piping, boilers, kitchen appliances, and reverse osmosis membranes.',
+          h1: 'Matching Media Type to Water Conditions',
+          m1: 'Sand and spun-polypropylene cartridges intercept physical grit and turbidity, while activated carbon focuses on chlorine taste and organic odors.',
+          m2: 'Ion-exchange softeners specifically exchange calcium and magnesium scale-formers for softer utility water across hospitality and industrial lines.'
+        },
+        'maintenance-tips': {
+          title: 'Water Purifier Maintenance Tips',
+          cat: 'Maintenance & Care',
+          img: 'images/technician-service.jpg',
+          p1: 'Purification equipment works continuously behind the scenes, gradually trapping sediment, organic compounds, and mineral scale inside replaceable media.',
+          p2: 'Following realistic preventive service intervals protects water taste, prevents unnecessary strain on feed pumps, and supports steady system life.',
+          h1: 'Practical Signals That Servicing Is Due',
+          m1: 'Noticeable drops in dispensed flow, subtle shifts in taste or odor, unusual pump sound, or overdue cartridge logs are clear prompts to arrange an inspection.',
+          m2: 'Keep a simple record of cartridge replacement dates and contact AquaPure whenever raw water supply changes seasonally.'
+        }
+      };
+      const key = new URLSearchParams(window.location.search).get('article');
+      const data = articles[key];
+      if (!data) return;
+      document.title = `${data.title} | AquaPure`;
+      document.getElementById('articleTitle').textContent = data.title;
+      document.getElementById('articleBreadcrumb').textContent = data.title;
+      document.getElementById('articleCategoryTag').textContent = data.cat;
+      document.getElementById('articleHeroImg').src = data.img;
+      document.getElementById('articleIntroP1').textContent = data.p1;
+      document.getElementById('articleIntroP2').textContent = data.p2;
+      document.getElementById('articleMainH1').textContent = data.h1;
+      document.getElementById('articleMainP1').textContent = data.m1;
+      document.getElementById('articleMainP2').textContent = data.m2;
+    });
+  </script>
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

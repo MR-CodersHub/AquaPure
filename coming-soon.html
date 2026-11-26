@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AquaPure scheduled maintenance notice and notification signup.">
+  <title>Scheduled Maintenance – Coming Soon | AquaPure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <div class="coming-soon-shell">
+    <header class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;z-index:2">
+      <a href="index.html" class="logo" aria-label="AquaPure Home">
+        <span class="logo-mark" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 36 36" fill="none"><path d="M18 3C18 3 7 14.5 7 22C7 28.075 11.925 33 18 33C24.075 33 29 28.075 29 22C29 14.5 18 3Z" fill="url(#csDrop)"/><defs><linearGradient id="csDrop" x1="18" y1="3" x2="18" y2="33" gradientUnits="userSpaceOnUse"><stop stop-color="#48CAE4"/><stop offset="1" stop-color="#168AAD"/></linearGradient></defs></svg>
+        </span>
+        <span class="logo-text" style="color:#FFFFFF">Aqua<span style="color:#48CAE4">Pure</span></span>
+      </a>
+      <div style="display:flex;align-items:center;gap:10px">
+        <button type="button" class="icon-btn rtl-toggle" id="rtlToggle" aria-label="Toggle RTL layout">RTL</button>
+        <a href="index.html" class="btn btn--ghost-light btn--sm">Back to Home</a>
+      </div>
+    </header>
+
+    <main class="coming-soon-main">
+      <div style="display:inline-flex;justify-content:center;margin-bottom:20px">
+        <svg width="76" height="76" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" stroke="rgba(72,202,228,0.3)" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <path d="M32 12C32 12 20 26.5 20 36A12 12 0 0044 36C44 26.5 32 12 32 12Z" fill="url(#csCenterDrop)"/>
+          <defs><linearGradient id="csCenterDrop" x1="32" y1="12" x2="32" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#48CAE4"/><stop offset="1" stop-color="#2A9D8F"/></linearGradient></defs>
+        </svg>
+      </div>
+
+      <span class="section-eyebrow" style="color:var(--color-cyan);justify-content:center">Scheduled Update</span>
+      <h1>Refining Our Digital Experience</h1>
+      <p style="color:rgba(232,247,250,0.82);max-width:54ch;margin:14px auto 0;font-size:1.05rem">
+        AquaPure is carrying out scheduled digital maintenance to keep our water solution resources fast, clear, and dependable. Thank you for your patience.
+      </p>
+
+      <div class="countdown" id="countdown" aria-label="Estimated maintenance countdown">
+        <div class="countdown-box"><span class="countdown-num" id="cdDays">00</span><span class="countdown-label">Days</span></div>
+        <div class="countdown-box"><span class="countdown-num" id="cdHours">00</span><span class="countdown-label">Hours</span></div>
+        <div class="countdown-box"><span class="countdown-num" id="cdMinutes">00</span><span class="countdown-label">Minutes</span></div>
+        <div class="countdown-box"><span class="countdown-num" id="cdSeconds">00</span><span class="countdown-label">Seconds</span></div>
+      </div>
+
+      <form id="notifyForm" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;max-width:460px;margin:0 auto" novalidate>
+        <input type="email" id="notifyEmail" class="newsletter-input" placeholder="Enter your email for launch update" aria-label="Email for launch notification" required>
+        <button type="submit" class="btn btn--aqua">Notify Me</button>
+      </form>
+      <p class="form-disclaimer" style="color:rgba(232,247,250,0.62);margin-top:12px">
+        Front-end demonstration notice — notification signups are validated locally without sending email.
+      </p>
+
+      <div style="margin-top:28px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
+        <a href="index.html" class="btn btn--white">Back to Home</a>
+        <a href="contact.html" class="btn btn--ghost-light">Urgent Enquiry</a>
+      </div>
+    </main>
+
+    <footer class="container" style="text-align:center;color:rgba(232,247,250,0.62);font-size:0.84rem;position:relative;z-index:2">
+      &copy; 2026 AquaPure. All rights reserved. &middot; [Email Placeholder]
+    </footer>
+  </div>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script>
+    (() => {
+      const target = Date.now() + 7 * 24 * 60 * 60 * 1000;
+      const update = () => {
+        const diff = Math.max(0, target - Date.now());
+        document.getElementById('cdDays').textContent = String(Math.floor(diff / 86400000)).padStart(2, '0');
+        document.getElementById('cdHours').textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0');
+        document.getElementById('cdMinutes').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+        document.getElementById('cdSeconds').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+      };
+      update();
+      setInterval(update, 1000);
+
+      document.getElementById('notifyForm')?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const input = document.getElementById('notifyEmail');
+        const val = input?.value.trim() || '';
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+          window.showToast?.('Please enter a valid email address.', 'error');
+          input?.focus();
+          return;
+        }
+        input.value = '';
+        window.showToast?.('Email recorded in this front-end demonstration.', 'success', 4500);
+      });
+    })();
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
