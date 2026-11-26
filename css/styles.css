@@ -102,6 +102,40 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+@media (min-width: 1536px) {
+  :root {
+    --container-max: 1360px;
+    --header-height: 82px;
+  }
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 70px;
+  }
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --header-height: 66px;
+  }
+  html {
+    font-size: 14.5px;
+  }
+}
+
 body {
   margin: 0;
   font-family: var(--font-body);
