@@ -14,6 +14,7 @@
   })();
   const assetBase = inPagesDir ? '../' : '';
   const pageBase = inPagesDir ? '' : 'pages/';
+  const resolveAsset = (path) => (/^https?:\/\//i.test(path) ? path : `${assetBase}${path}`);
 
   const PRODUCTS = [
     {
@@ -21,7 +22,8 @@
       name: 'AquaPure Countertop Purifier',
       category: 'domestic-purifier',
       badge: 'Residential',
-      image: 'images/domestic-purifier.jpg',
+      image: 'https://i.pinimg.com/736x/14/e9/53/14e953157b07781cc0c45191144fb72c.jpg',
+      imagePosition: 'center 12%',
       description: 'Compact countertop drinking water purifier designed for modern residential kitchens with multi-stage particulate and taste filtration.',
       highlights: ['Point-of-Use', 'Compact Footprint', 'Routine Cartridge Care'],
       serviceLink: 'service-details.html?service=domestic-installation',
@@ -31,7 +33,7 @@
       name: 'AquaPure Wall-Mount Purifier Series',
       category: 'domestic-purifier',
       badge: 'Popular',
-      image: 'images/domestic-wall-purifier.jpg',
+      image: 'https://i.pinimg.com/736x/1e/3d/b2/1e3db262aa1922e6f8ae84837ebd9914.jpg',
       description: 'Space-saving wall-mounted household purifier engineered for reliable daily drinking water preparation and accessible maintenance.',
       highlights: ['Wall-Mounted', 'Multi-Stage Media', 'Household Supply'],
       serviceLink: 'service-details.html?service=domestic-installation',
@@ -41,7 +43,7 @@
       name: 'AquaPure Under-Sink Domestic RO',
       category: 'domestic-ro',
       badge: 'Residential RO',
-      image: 'images/domestic-ro-undersink.jpg',
+      image: 'https://i.pinimg.com/736x/91/bf/a7/91bfa7c1a33c28843399081fef821b77.jpg',
       description: 'Concealed under-counter reverse osmosis system designed to reduce dissolved salts and improve household drinking water taste.',
       highlights: ['Under-Sink Design', 'RO Membrane Stage', 'Pressurized Storage'],
       serviceLink: 'service-details.html?service=domestic-installation',
@@ -51,7 +53,7 @@
       name: 'AquaPure HomeGuard RO + UV Unit',
       category: 'domestic-ro',
       badge: 'Dual Stage',
-      image: 'images/ro-membrane-unit.jpg',
+      image: 'https://i.pinimg.com/736x/01/28/f5/0128f5c4bbaa614b3065ec5262808d9b.jpg',
       description: 'Residential reverse osmosis and ultraviolet polishing unit selected based on local municipal or groundwater source characteristics.',
       highlights: ['RO + UV Conditioning', 'Household Drinking Water', 'Technician Setup'],
       serviceLink: 'service-details.html?service=domestic-installation',
@@ -61,7 +63,7 @@
       name: 'AquaPure Commercial Skid RO System',
       category: 'commercial-ro',
       badge: 'Commercial',
-      image: 'images/commercial-ro.jpg',
+      image: 'https://i.pinimg.com/736x/f1/20/04/f120048dcbb4d7de0b108505711b1eb9.jpg',
       description: 'Frame-mounted commercial reverse osmosis system configured for offices, cafés, clinics, and dining establishments.',
       highlights: ['Skid-Mounted', 'Scalable Selection', 'Continuous Operation'],
       serviceLink: 'service-details.html?service=ro-installation',
@@ -71,7 +73,7 @@
       name: 'AquaPure Institutional RO Station',
       category: 'commercial-ro',
       badge: 'Popular',
-      image: 'images/hospitality-water.jpg',
+      image: 'https://i.pinimg.com/1200x/17/66/bf/1766bf77baa25ec6913bb8917d6c2389.jpg',
       description: 'High-utility commercial purification station suitable for schools, hospitality venues, and mid-size commercial buildings.',
       highlights: ['Institutional Grade', 'Stainless Frame', 'Planned Service'],
       serviceLink: 'service-details.html?service=ro-installation',
@@ -81,7 +83,7 @@
       name: 'AquaPure Industrial Brackish RO Plant',
       category: 'industrial-ro',
       badge: 'Industrial',
-      image: 'images/hero-facility.jpg',
+      image: 'https://i.pinimg.com/736x/c3/35/cc/c335cc92ad2ae712c68b98cd317feb5c.jpg',
       description: 'Custom-configured industrial reverse osmosis plant engineered around feed-water assessment, output volume, and process requirements.',
       highlights: ['Site-Specific Design', 'Pressure Vessel Array', 'Full Commissioning'],
       serviceLink: 'service-details.html?service=ro-installation',
@@ -91,7 +93,7 @@
       name: 'AquaPure High-Recovery Industrial Skid',
       category: 'industrial-ro',
       badge: 'Custom Quote',
-      image: 'images/industrial-plant.jpg',
+      image: 'https://i.pinimg.com/736x/47/98/58/47985871072f8268d40c2a297f3db085.jpg',
       description: 'Heavy-duty multi-vessel industrial RO system built for manufacturing lines, beverage processing, and utility water demands.',
       highlights: ['Process Water', 'Multi-Vessel Skid', 'Enquiry Engineered'],
       serviceLink: 'service-details.html?service=ro-installation',
@@ -101,7 +103,7 @@
       name: 'AquaPure Chemical Dosing Assembly',
       category: 'treatment-equipment',
       badge: 'Process Control',
-      image: 'images/treatment-equipment.jpg',
+      image: 'https://i.pinimg.com/736x/32/71/36/327136ed45225def421f880d19b5be01.jpg',
       description: 'Precision metering and dosing pump assembly supporting scale control and pH balancing in commercial and industrial treatment trains.',
       highlights: ['Controlled Dosing', 'Pre/Post Conditioning', 'Industrial Utility'],
       serviceLink: 'service-details.html?service=ro-installation',
@@ -111,7 +113,7 @@
       name: 'AquaPure Raw Water Conditioning Unit',
       category: 'treatment-equipment',
       badge: 'System Component',
-      image: 'images/manufacturing-water.jpg',
+      image: 'https://i.pinimg.com/736x/76/f6/8c/76f68c44ff6084c1f23524c904947390.jpg',
       description: 'Integrated water treatment module selected following source-water review to prepare feed streams for downstream purification.',
       highlights: ['Source Conditioning', 'Modular Layout', 'Assessment Driven'],
       serviceLink: 'service-details.html?service=water-testing',
@@ -121,7 +123,7 @@
       name: 'AquaPure Multi-Stage Cartridge Filtration',
       category: 'filtration',
       badge: 'Filtration',
-      image: 'images/filtration-system.jpg',
+      image: 'https://i.pinimg.com/736x/22/94/c7/2294c7e65c7d83c59797da2a34ff0265.jpg',
       description: 'Layered micron sediment and activated carbon cartridge array designed to clarify turbidity, chlorine odor, and fine suspended solids.',
       highlights: ['Sediment & Carbon', 'Clarification Stage', 'Accessible Housing'],
       serviceLink: 'service-details.html?service=maintenance',
@@ -131,7 +133,7 @@
       name: 'AquaPure Ultrafiltration Hollow-Fiber Module',
       category: 'filtration',
       badge: 'UF Technology',
-      image: 'images/healthcare-water.jpg',
+      image: 'https://i.pinimg.com/736x/df/7e/9f/df7e9f43c54f9249654c0b854e43a705.jpg',
       description: 'Membrane-based ultrafiltration system providing fine suspended-matter separation for residential complexes and commercial facilities.',
       highlights: ['Ultrafiltration', 'Low-Pressure Flow', 'Consistent Output'],
       serviceLink: 'service-details.html?service=ro-installation',
@@ -141,7 +143,7 @@
       name: 'AquaPure Automatic Water Softener',
       category: 'softening',
       badge: 'Hardness Care',
-      image: 'images/water-softener.jpg',
+      image: 'https://i.pinimg.com/736x/a8/89/49/a88949c549d9ab683d490026b2e2c255.jpg',
       description: 'Ion-exchange resin softening vessel equipped with automated regeneration valve control to help protect plumbing and heating appliances.',
       highlights: ['Ion-Exchange Resin', 'Automated Valve', 'Scale Reduction'],
       serviceLink: 'service-details.html?service=ro-installation',
@@ -151,7 +153,7 @@
       name: 'AquaPure Duplex Commercial Softener',
       category: 'softening',
       badge: 'Continuous Flow',
-      image: 'images/commercial-ro.jpg',
+      image: 'https://i.pinimg.com/1200x/a5/a8/79/a5a8796f3ff34ff5362112a006022b4a.jpg',
       description: 'Dual-column softening configuration designed for hotels, laundries, and boiler feeds requiring uninterrupted softened water.',
       highlights: ['Alternating Tanks', 'Commercial Utility', 'Service Supported'],
       serviceLink: 'service-details.html?service=ro-installation',
@@ -161,7 +163,7 @@
       name: 'AquaPure Dual-Media Sand Pre-Filter',
       category: 'pre-treatment',
       badge: 'Pre-Treatment',
-      image: 'images/pretreatment-vessels.jpg',
+      image: 'https://i.pinimg.com/1200x/52/6a/0b/526a0b82f873345b59276d08ce43739f.jpg',
       description: 'Graded silica sand and anthracite pressure vessel removing coarse suspended solids prior to commercial or industrial RO stages.',
       highlights: ['Turbidity Reduction', 'FRP / Steel Options', 'Backwash Ready'],
       serviceLink: 'service-details.html?service=ro-installation',
@@ -171,7 +173,7 @@
       name: 'AquaPure Activated Carbon Pre-Treatment Vessel',
       category: 'pre-treatment',
       badge: 'Pre-Treatment',
-      image: 'images/industrial-plant.jpg',
+      image: 'https://i.pinimg.com/736x/97/45/17/974517da65cb3675ab6471c1a6c82330.jpg',
       description: 'Granular activated carbon media tank engineered to adsorb free chlorine and organic compounds before delicate RO membranes.',
       highlights: ['Dechlorination', 'Membrane Protection', 'Serviceable Media'],
       serviceLink: 'service-details.html?service=maintenance',
@@ -181,7 +183,7 @@
       name: 'AquaPure Inline UV Disinfection Chamber',
       category: 'post-treatment',
       badge: 'Post-Treatment',
-      image: 'images/uv-post-treatment.jpg',
+      image: 'https://i.pinimg.com/736x/08/1d/e3/081de36be75bd8098737237b5efdc238.jpg',
       description: 'Stainless steel ultraviolet chamber providing chemical-free final polishing for treated water storage and distribution lines.',
       highlights: ['Stainless Chamber', 'Final Polishing', 'Compact Inline'],
       serviceLink: 'service-details.html?service=maintenance',
@@ -191,7 +193,7 @@
       name: 'AquaPure Mineral & Taste Polishing Stage',
       category: 'post-treatment',
       badge: 'Post-Treatment',
-      image: 'images/pure-water-macro.jpg',
+      image: 'https://i.pinimg.com/1200x/ee/09/6e/ee096e6ce43415982607f517f5043b69.jpg',
       description: 'Post-RO mineral balancing and final activated-carbon taste cartridge crafted to refine drinking water palatability.',
       highlights: ['Taste Refinement', 'pH Conditioning', 'Easy Cartridge Swap'],
       serviceLink: 'service-details.html?service=maintenance',
@@ -201,7 +203,7 @@
       name: 'AquaPure Scheduled Filter Replacement Pack',
       category: 'accessories',
       badge: 'Consumables',
-      image: 'images/technician-service.jpg',
+      image: 'https://i.pinimg.com/736x/73/35/81/7335816a98bfa5f30f9288e75cad8d79.jpg',
       description: 'Matched sediment, pre-carbon, and post-carbon replacement cartridges packaged for routine preventive servicing.',
       highlights: ['Matched Media', 'Preventive Upkeep', 'Domestic & Commercial'],
       serviceLink: 'service-details.html?service=maintenance',
@@ -211,7 +213,7 @@
       name: 'AquaPure Pressure Gauges & Flow Instrumentation',
       category: 'accessories',
       badge: 'Accessories',
-      image: 'images/water-testing.jpg',
+      image: 'https://i.pinimg.com/736x/3c/be/5d/3cbe5d504691fc08924edb6a2e4172bc.jpg',
       description: 'Essential monitoring accessories including inline rotameters, pressure gauges, and handheld TDS check tools for routine system observation.',
       highlights: ['Flow Monitoring', 'Pressure Checks', 'Diagnostic Utility'],
       serviceLink: 'service-details.html?service=water-testing',
@@ -307,8 +309,9 @@
 
   function openProductModal(product) {
     const backdrop = ensureProductModal();
-    backdrop.querySelector('#modalProductImg').src = `${assetBase}${product.image}`;
+    backdrop.querySelector('#modalProductImg').src = resolveAsset(product.image);
     backdrop.querySelector('#modalProductImg').alt = product.name;
+    backdrop.querySelector('#modalProductImg').style.objectPosition = product.imagePosition || 'center';
     backdrop.querySelector('#modalProductCat').textContent = CATEGORY_LABELS[product.category] || product.category;
     backdrop.querySelector('#modalProductTitle').textContent = product.name;
     backdrop.querySelector('#modalProductDesc').textContent = product.description;
@@ -364,7 +367,7 @@
         (product) => `
       <article class="product-card reveal visible">
         <div class="product-card-media">
-          <img src="${assetBase}${product.image}" alt="${product.name}" loading="lazy">
+          <img src="${resolveAsset(product.image)}" alt="${product.name}" loading="lazy" style="object-position:${product.imagePosition || 'center'}">
           ${product.badge ? `<span class="product-card-badge">${product.badge}</span>` : ''}
         </div>
         <div class="product-card-body">

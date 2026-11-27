@@ -18,36 +18,43 @@
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <div class="coming-soon-shell">
     <div class="hero-grid-bg" aria-hidden="true"></div>
 
-    <header class="container maint-header">
-      <a href="../index.html" class="logo" aria-label="AquaPure – Clarity in Every Drop.">
-        <span class="logo-mark" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 36 36" fill="none">
-            <path d="M18 3C18 3 7 14.5 7 22C7 28.075 11.925 33 18 33C24.075 33 29 28.075 29 22C29 14.5 18 3 18 3Z" fill="url(#csDrop)"/>
-            <path d="M18 11C18 11 12 17.5 12 22C12 25.314 14.686 28 18 28C21.314 28 24 25.314 24 22C24 17.5 18 11 18 11Z" fill="rgba(255,255,255,0.34)"/>
-            <defs>
-              <linearGradient id="csDrop" x1="18" y1="3" x2="18" y2="33" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#48CAE4"/>
-                <stop offset="1" stop-color="#168AAD"/>
-              </linearGradient>
-            </defs>
-          </svg>
-        </span>
-        <span class="logo-brand-group">
-          <span class="logo-text">Aqua<span class="logo-accent">Pure</span></span>
-          <span class="logo-tagline">Clarity in Every Drop.</span>
-        </span>
-      </a>
+    <header class="utility-topbar">
+      <div class="container utility-topbar-inner">
+        <a href="../index.html" class="logo" aria-label="AquaPure – Clarity in Every Drop.">
+          <span class="logo-mark" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 36 36" fill="none">
+              <path d="M18 3C18 3 7 14.5 7 22C7 28.075 11.925 33 18 33C24.075 33 29 28.075 29 22C29 14.5 18 3 18 3Z" fill="url(#csDrop)"/>
+              <path d="M18 11C18 11 12 17.5 12 22C12 25.314 14.686 28 18 28C21.314 28 24 25.314 24 22C24 17.5 18 11 18 11Z" fill="rgba(255,255,255,0.34)"/>
+              <defs>
+                <linearGradient id="csDrop" x1="18" y1="3" x2="18" y2="33" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#48CAE4"/>
+                  <stop offset="1" stop-color="#168AAD"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="logo-brand-group">
+            <span class="logo-text">Aqua<span class="logo-accent">Pure</span></span>
+            <span class="logo-tagline">Clarity in Every Drop.</span>
+          </span>
+        </a>
 
-      <div class="maint-header-actions">
-        <button type="button" class="icon-btn rtl-toggle" id="rtlToggle" aria-label="Toggle RTL layout">RTL</button>
-        <a href="../index.html" class="btn btn--ghost-light btn--sm">Back to Home</a>
+        <div class="utility-topbar-actions">
+          <button type="button" class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button type="button" class="icon-btn rtl-toggle" id="rtlToggle" aria-label="Toggle RTL layout">RTL</button>
+        </div>
       </div>
     </header>
 
-    <main class="coming-soon-main">
+    <main id="main-content" class="coming-soon-main">
       <div class="maint-grid">
         <div class="maint-content">
           <span class="maint-status-pill">
@@ -91,8 +98,8 @@
           </div>
 
           <div class="maint-actions">
-            <a href="../index.html" class="btn btn--white btn--lg">Back to Home</a>
-            <a href="contact.html" class="btn btn--ghost-light btn--lg">Urgent Enquiry</a>
+            <a href="../index.html" class="btn btn--primary btn--lg">Back to Home</a>
+            <a href="contact.html" class="btn btn--secondary btn--lg">Urgent Enquiry</a>
           </div>
         </div>
 
@@ -109,15 +116,15 @@
                   <stop offset="100%" stop-color="#168AAD"/>
                 </linearGradient>
               </defs>
-              <circle cx="180" cy="150" r="124" fill="rgba(72,202,228,0.06)" stroke="rgba(72,202,228,0.28)" stroke-width="1.5"/>
+              <circle cx="180" cy="150" r="124" fill="rgba(22,138,173,0.08)" stroke="rgba(72,202,228,0.28)" stroke-width="1.5"/>
               <g class="maint-spin-slow">
                 <circle cx="180" cy="150" r="102" fill="none" stroke="url(#maintRingGrad)" stroke-width="2" stroke-dasharray="10 8"/>
                 <circle cx="180" cy="48" r="5" fill="#48CAE4"/>
-                <circle cx="282" cy="150" r="4" fill="#90E0EF"/>
+                <circle cx="282" cy="150" r="4" fill="#168AAD"/>
                 <circle cx="180" cy="252" r="5" fill="#2A9D8F"/>
                 <circle cx="78" cy="150" r="4" fill="#48CAE4"/>
               </g>
-              <circle cx="180" cy="150" r="78" fill="rgba(11,31,48,0.65)" stroke="rgba(144,224,239,0.35)" stroke-width="1.5"/>
+              <circle cx="180" cy="150" r="78" fill="#0b1f30" stroke="rgba(72,202,228,0.45)" stroke-width="1.5"/>
               <path d="M180 86C180 86 136 134 136 164A44 44 0 00224 164C224 134 180 86 180 86Z" fill="url(#maintDropGrad)"/>
               <path d="M180 116C180 116 154 145 154 164A26 26 0 00206 164C206 145 180 116 180 116Z" fill="rgba(255,255,255,0.28)"/>
               <path d="M167 166l9 9 18-20" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
@@ -141,15 +148,6 @@
         </aside>
       </div>
     </main>
-
-    <footer class="container maint-footer">
-      <span>&copy; 2026 AquaPure &mdash; Clarity in Every Drop.</span>
-      <div class="maint-footer-links">
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms.html">Terms &amp; Conditions</a>
-        <a href="sitemap.html">Sitemap</a>
-      </div>
-    </footer>
   </div>
 
   <div class="toast-container" id="toastContainer" aria-live="polite"></div>

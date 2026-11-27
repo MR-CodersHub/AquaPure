@@ -465,6 +465,10 @@
     const searchInput = document.getElementById('blogSearch');
     const catButtons = document.querySelectorAll('[data-blog-cat]');
     const cards = document.querySelectorAll('[data-article-card]');
+    const countEl = document.getElementById('blogFilterCount');
+    const resetBtn = document.getElementById('blogResetBtn');
+    const empty = document.getElementById('blogEmptyState');
+    const articlesSection = document.getElementById('latest-articles');
     if (!cards.length) return;
 
     let activeCat = 'all';
@@ -479,11 +483,31 @@
         const matchQuery = !query || text.includes(query);
         const show = matchCat && matchQuery;
         card.style.display = show ? '' : 'none';
-        if (show) visibleCount += 1;
+        if (show) {
+          card.classList.add('visible');
+          visibleCount += 1;
+        }
       });
-      const empty = document.getElementById('blogEmptyState');
+
+      catButtons.forEach((btn) => {
+        const isActive = (btn.dataset.blogCat || 'all') === activeCat;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', String(isActive));
+      });
+
+      if (countEl) {
+        countEl.textContent = `Showing ${visibleCount} of ${cards.length} article${cards.length === 1 ? '' : 's'}`;
+      }
       if (empty) empty.hidden = visibleCount > 0;
     };
+
+    const params = new URLSearchParams(window.location.search);
+    const initialCat = params.get('category');
+    if (initialCat && Array.from(catButtons).some((b) => b.dataset.blogCat === initialCat)) {
+      activeCat = initialCat;
+    }
+
+    apply();
 
     searchInput?.addEventListener('input', (e) => {
       query = e.target.value.trim().toLowerCase();
@@ -492,11 +516,19 @@
 
     catButtons.forEach((btn) => {
       btn.addEventListener('click', () => {
-        catButtons.forEach((b) => b.classList.remove('active'));
-        btn.classList.add('active');
         activeCat = btn.dataset.blogCat || 'all';
         apply();
+        if (btn.dataset.blogScroll === 'true' && articlesSection) {
+          articlesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       });
+    });
+
+    resetBtn?.addEventListener('click', () => {
+      activeCat = 'all';
+      query = '';
+      if (searchInput) searchInput.value = '';
+      apply();
     });
   }
 
