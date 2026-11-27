@@ -532,6 +532,243 @@
     });
   }
 
+  function initHeroParticleCanvas(hero, canvasId, opts = {}) {
+    const canvas = document.getElementById(canvasId);
+    if (!hero || !canvas || !canvas.getContext) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const prefersReducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
+    const desktopCount = opts.desktopCount ?? 46;
+    const mobileCount = opts.mobileCount ?? 24;
+    let width = 0;
+    let height = 0;
+    let particles = [];
+    let rafId = null;
+    let inViewport = true;
+    const pointer = { x: -9999, y: -9999 };
+
+    function seedParticles() {
+      const count = width < 640 ? mobileCount : desktopCount;
+      particles = Array.from({ length: count }, (_, idx) => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        r: 1.5 + (idx % 4) * 1.0,
+        vx: (Math.random() - 0.5) * 0.42,
+        vy: -0.24 - Math.random() * 0.48,
+        alpha: 0.28 + Math.random() * 0.52,
+        phase: Math.random() * Math.PI * 2,
+        teal: idx % 3 === 0,
+        halo: idx % 4 === 0
+      }));
+    }
+
+    function resize() {
+      const rect = hero.getBoundingClientRect();
+      width = Math.max(rect.width || 960, 320);
+      height = Math.max(rect.height || 520, 320);
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(width * dpr);
+      canvas.height = Math.round(height * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      if (particles.length === 0) seedParticles();
+    }
+
+    function drawFrame(stepParticles) {
+      ctx.clearRect(0, 0, width, height);
+
+      for (let i = 0; i < particles.length; i += 1) {
+        const p = particles[i];
+        if (stepParticles) {
+          p.phase += 0.02;
+          p.x += p.vx + Math.sin(p.phase) * 0.18;
+          p.y += p.vy;
+
+          const dx = p.x - pointer.x;
+          const dy = p.y - pointer.y;
+          const distSq = dx * dx + dy * dy;
+          if (distSq > 0 && distSq < 13000) {
+            const dist = Math.sqrt(distSq);
+            const push = (1 - dist / 114) * 0.65;
+            p.x += (dx / dist) * push;
+            p.y += (dy / dist) * push;
+          }
+
+          if (p.y < -16) p.y = height + 16;
+          if (p.x < -16) p.x = width + 16;
+          if (p.x > width + 16) p.x = -16;
+        }
+
+        if (p.halo) {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r * 2.8, 0, Math.PI * 2);
+          ctx.fillStyle = p.teal ? 'rgba(42, 157, 143, 0.12)' : 'rgba(72, 202, 228, 0.14)';
+          ctx.fill();
+        }
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.teal
+          ? `rgba(42, 157, 143, ${p.alpha})`
+          : `rgba(103, 232, 249, ${p.alpha})`;
+        ctx.fill();
+
+        for (let j = i + 1; j < particles.length; j += 1) {
+          const q = particles[j];
+          const lx = p.x - q.x;
+          const ly = p.y - q.y;
+          const dSq = lx * lx + ly * ly;
+          if (dSq < 12500) {
+            const lineAlpha = (1 - dSq / 12500) * 0.18;
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(q.x, q.y);
+            ctx.strokeStyle = `rgba(72, 202, 228, ${lineAlpha.toFixed(3)})`;
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    function loop() {
+      if (!inViewport) {
+        rafId = null;
+        return;
+      }
+      drawFrame(true);
+      rafId = window.requestAnimationFrame?.(loop) || null;
+    }
+
+    resize();
+    drawFrame(false);
+
+    if (!prefersReducedMotion && typeof window.requestAnimationFrame === 'function') {
+      hero.addEventListener('pointermove', (e) => {
+        const rect = hero.getBoundingClientRect();
+        pointer.x = e.clientX - rect.left;
+        pointer.y = e.clientY - rect.top;
+      });
+
+      hero.addEventListener('pointerleave', () => {
+        pointer.x = -9999;
+        pointer.y = -9999;
+      });
+
+      if ('IntersectionObserver' in window) {
+        const visObs = new IntersectionObserver((entries) => {
+          inViewport = entries[0]?.isIntersecting ?? true;
+          if (inViewport && !rafId) loop();
+        }, { threshold: 0.05 });
+        visObs.observe(hero);
+      }
+
+      window.addEventListener('resize', resize, { passive: true });
+      loop();
+    }
+  }
+
+  function initHomeHero() {
+    const hero = document.querySelector('.home-hero');
+    if (!hero) return;
+
+    initHeroParticleCanvas(hero, 'homeParticles', { desktopCount: 40, mobileCount: 20 });
+
+    const stageBtns = hero.querySelectorAll('[data-home-stage]');
+    const stageNote = document.getElementById('homeStageNote');
+    const stageCopy = {
+      0: 'Captures suspended sand, rust, and fine particulate grit before finer media.',
+      1: 'Adsorbs residual chlorine, organic compounds, and unwanted taste or odor.',
+      2: 'Separates dissolved minerals and solids tailored to local water supply.',
+      3: 'Delivers final point-of-use clarity and fresh drinking water polish.'
+    };
+
+    stageBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const idx = btn.dataset.homeStage;
+        stageBtns.forEach((b) => {
+          const active = b === btn;
+          b.classList.toggle('is-active', active);
+          b.setAttribute('aria-pressed', String(active));
+        });
+        if (stageNote && stageCopy[idx]) {
+          stageNote.textContent = stageCopy[idx];
+        }
+      });
+    });
+  }
+
+  function initHome2Hero() {
+    const hero = document.querySelector('.h2-hero');
+    if (!hero) return;
+
+    const tabs = hero.querySelectorAll('.h2-scale-tab');
+    const feedEl = document.getElementById('h2SpecFeed');
+    const trainEl = document.getElementById('h2SpecTrain');
+    const scopeEl = document.getElementById('h2SpecScope');
+    const targetBtn = document.getElementById('h2ScaleLink');
+    const targetLabel = document.getElementById('h2ScaleLinkLabel') || targetBtn;
+    const pipelineNodes = hero.querySelectorAll('.h2-pipeline-node');
+
+    const profiles = {
+      domestic: {
+        feed: 'Municipal & Borewell Water',
+        train: 'Sediment + Carbon + RO',
+        scope: 'Point-of-Use Drinking',
+        label: 'View Domestic Scale',
+        href: '#domestic-solutions',
+        activeStage: 1
+      },
+      commercial: {
+        feed: 'Daily Facility Demand',
+        train: 'Twin Skid + Storage Tank',
+        scope: 'Offices, Dining & Clinics',
+        label: 'View Commercial RO',
+        href: '#commercial',
+        activeStage: 2
+      },
+      industrial: {
+        feed: 'High-Volume Process Feed',
+        train: 'Multimedia + Antiscalant + RO',
+        scope: 'Site-Engineered Plants',
+        label: 'View Industrial Plants',
+        href: '#industrial',
+        activeStage: 3
+      }
+    };
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const key = tab.dataset.scale;
+        const profile = profiles[key];
+        if (!profile) return;
+
+        tabs.forEach((t) => {
+          const isMatch = t === tab;
+          t.classList.toggle('is-active', isMatch);
+          t.setAttribute('aria-selected', String(isMatch));
+        });
+
+        if (feedEl) feedEl.textContent = profile.feed;
+        if (trainEl) trainEl.textContent = profile.train;
+        if (scopeEl) scopeEl.textContent = profile.scope;
+        if (targetBtn) {
+          targetBtn.setAttribute('href', profile.href);
+        }
+        if (targetLabel) {
+          targetLabel.textContent = profile.label;
+        }
+
+        pipelineNodes.forEach((node, idx) => {
+          node.classList.toggle('is-highlighted', idx === profile.activeStage);
+        });
+      });
+    });
+
+    initHeroParticleCanvas(hero, 'h2Particles', { desktopCount: 46, mobileCount: 24 });
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initDirection();
@@ -549,5 +786,7 @@
     initNewsletter();
     initServiceDetailSwitcher();
     initBlogFilter();
+    initHomeHero();
+    initHome2Hero();
   });
 })();
