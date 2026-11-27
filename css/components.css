@@ -881,14 +881,69 @@
   animation: h2DropRise var(--dur, 11s) linear var(--delay, 0s) infinite;
 }
 
-.h2-drop--1 { inset-inline-start: 7%; width: 7px; height: 7px; --dur: 10s; --delay: -2s; }
-.h2-drop--2 { inset-inline-start: 16%; width: 11px; height: 11px; --dur: 13s; --delay: -6s; }
-.h2-drop--3 { inset-inline-start: 28%; width: 5px; height: 5px; --dur: 9s; --delay: -1s; }
-.h2-drop--4 { inset-inline-start: 41%; width: 9px; height: 9px; --dur: 14s; --delay: -8s; }
-.h2-drop--5 { inset-inline-start: 54%; width: 6px; height: 6px; --dur: 11s; --delay: -4s; }
-.h2-drop--6 { inset-inline-start: 68%; width: 12px; height: 12px; --dur: 15s; --delay: -9s; }
-.h2-drop--7 { inset-inline-start: 81%; width: 7px; height: 7px; --dur: 10.5s; --delay: -3s; }
-.h2-drop--8 { inset-inline-start: 92%; width: 10px; height: 10px; --dur: 12.5s; --delay: -7s; }
+.h2-drop--1 {
+  inset-inline-start: 7%;
+  width: 7px;
+  height: 7px;
+  --dur: 10s;
+  --delay: -2s;
+}
+
+.h2-drop--2 {
+  inset-inline-start: 16%;
+  width: 11px;
+  height: 11px;
+  --dur: 13s;
+  --delay: -6s;
+}
+
+.h2-drop--3 {
+  inset-inline-start: 28%;
+  width: 5px;
+  height: 5px;
+  --dur: 9s;
+  --delay: -1s;
+}
+
+.h2-drop--4 {
+  inset-inline-start: 41%;
+  width: 9px;
+  height: 9px;
+  --dur: 14s;
+  --delay: -8s;
+}
+
+.h2-drop--5 {
+  inset-inline-start: 54%;
+  width: 6px;
+  height: 6px;
+  --dur: 11s;
+  --delay: -4s;
+}
+
+.h2-drop--6 {
+  inset-inline-start: 68%;
+  width: 12px;
+  height: 12px;
+  --dur: 15s;
+  --delay: -9s;
+}
+
+.h2-drop--7 {
+  inset-inline-start: 81%;
+  width: 7px;
+  height: 7px;
+  --dur: 10.5s;
+  --delay: -3s;
+}
+
+.h2-drop--8 {
+  inset-inline-start: 92%;
+  width: 10px;
+  height: 10px;
+  --dur: 12.5s;
+  --delay: -7s;
+}
 
 .h2-scanline {
   position: absolute;
@@ -1373,9 +1428,23 @@
   animation: h2StreamGlide var(--sdur, 9s) linear var(--sdelay, 0s) infinite;
 }
 
-.h2-stream--1 { top: 22%; --sdur: 8.5s; --sdelay: -1s; }
-.h2-stream--2 { top: 54%; --sdur: 11s; --sdelay: -4.5s; }
-.h2-stream--3 { top: 79%; --sdur: 9.8s; --sdelay: -7s; }
+.h2-stream--1 {
+  top: 22%;
+  --sdur: 8.5s;
+  --sdelay: -1s;
+}
+
+.h2-stream--2 {
+  top: 54%;
+  --sdur: 11s;
+  --sdelay: -4.5s;
+}
+
+.h2-stream--3 {
+  top: 79%;
+  --sdur: 9.8s;
+  --sdelay: -7s;
+}
 
 .h2-pipeline-node {
   position: relative;
@@ -1462,12 +1531,15 @@
     transform: translate3d(0, 0, 0) scale(0.75);
     opacity: 0;
   }
+
   16% {
     opacity: 0.72;
   }
+
   82% {
     opacity: 0.48;
   }
+
   100% {
     transform: translate3d(18px, -640px, 0) scale(1.15);
     opacity: 0;
@@ -1475,32 +1547,77 @@
 }
 
 @keyframes h2FluxVertical {
-  0%, 100% { background-position: 0% 0%; }
-  50% { background-position: 0% 100%; }
+
+  0%,
+  100% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 0% 100%;
+  }
 }
 
 @keyframes h2Spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes h2Float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 @keyframes h2FluxTravel {
-  0% { left: 12%; opacity: 0; }
-  12% { opacity: 1; }
-  88% { opacity: 1; }
-  100% { left: 86%; opacity: 0; }
+  0% {
+    left: 12%;
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  88% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 86%;
+    opacity: 0;
+  }
 }
 
 @keyframes h2StreamGlide {
-  0% { transform: translateX(0); opacity: 0; }
-  18% { opacity: 0.72; }
-  82% { opacity: 0.5; }
-  100% { transform: translateX(155vw); opacity: 0; }
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  18% {
+    opacity: 0.72;
+  }
+
+  82% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(155vw);
+    opacity: 0;
+  }
 }
 
 @media (max-width: 1080px) {
@@ -1518,6 +1635,7 @@
 }
 
 @media (max-width: 680px) {
+
   .h2-spec-grid,
   .h2-section-nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1562,6 +1680,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .h2-drop,
   .h2-stream,
   .h2-scanline,
