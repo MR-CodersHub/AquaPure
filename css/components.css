@@ -1903,6 +1903,19 @@
   line-height: 1.68;
 }
 
+.card-text a {
+  color: var(--color-aqua);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.card-text a:hover,
+.card-text a:focus-visible {
+  color: var(--color-cyan);
+  border-bottom-color: currentColor;
+}
+
 .card--dark .card-text {
   color: var(--text-on-dark-muted);
 }
@@ -3272,6 +3285,46 @@
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.utility-contact-bar {
+  position: relative;
+  z-index: 5;
+  background: var(--bg-dark-band);
+  padding: 22px 0;
+}
+
+.utility-contact-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.utility-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  font-size: 0.875rem;
+}
+
+.utility-contact-links a {
+  color: rgba(232, 247, 250, 0.8);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.utility-contact-links a:hover,
+.utility-contact-links a:focus-visible {
+  color: var(--color-cyan);
+  border-bottom-color: currentColor;
+}
+
+.utility-contact-bar .footer-social {
+  margin-top: 0;
 }
 
 .error-shell {
